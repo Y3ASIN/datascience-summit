@@ -16,7 +16,7 @@ const About: React.FC = () => {
       </p>
 
       <div className="flex flex-wrap">
-        <GuestCard name='sabur khan' img='random' designation='Chairman of Daffodil' organization='Diu' />
+        <GuestCard name='sabur khan' img='/assets/' designation='Chairman of Daffodil' organization='Diu' />
       </div>
     </section>
   );

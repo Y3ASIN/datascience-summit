@@ -43,7 +43,7 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [targetDate, calculateTimeLeft]);
+  }, [targetDate]);
 
   return (
     <div className="flex items-center justify-center bg-purple-700 py-8 text-white">

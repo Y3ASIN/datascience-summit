@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 interface Props {
@@ -13,7 +14,14 @@ const GuestCard: React.FC<Props> = ({
   designation,
   organization,
 }) => {
-  return <div>{name}</div>;
+  return (
+    <div>
+      <Image src={img} width={10} height={10} alt="image" />
+      <h3> {name}</h3>
+      <p>{designation}</p>
+      <p>{organization}</p>
+    </div>
+  );
 };
 
 export default GuestCard;
