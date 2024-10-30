@@ -1,10 +1,10 @@
 import React from "react";
 
 interface Props {
-  img: String;
-  name: String;
-  designation: String;
-  organization: String;
+  img: string;
+  name: string;
+  designation: string;
+  organization: string;
 }
 
 const GuestCard: React.FC<Props> = ({

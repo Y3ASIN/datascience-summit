@@ -43,12 +43,12 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [targetDate]);
+  }, [targetDate, calculateTimeLeft]);
 
   return (
-    <div className="flex items-center justify-center bg-purple-700 text-white py-8">
-      <h1 className="text-2xl font-bold mr-4">Opening In!</h1>
-      <div className="flex space-x-4 bg-blue-400 p-4 rounded-md text-black">
+    <div className="flex items-center justify-center bg-purple-700 py-8 text-white">
+      <h1 className="mr-4 text-2xl font-bold">Opening In!</h1>
+      <div className="flex space-x-4 rounded-md bg-blue-400 p-4 text-black">
         <div className="text-center">
           <span className="text-4xl font-bold">{timeLeft.days}</span>
           <div>Days</div>
