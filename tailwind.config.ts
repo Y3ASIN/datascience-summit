@@ -8,9 +8,15 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        poppins: ["var(--font-poppins)"],
+      },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        text: "#190905",
+        background: "#ffffff",
+        primary: "#00dcf0",
+        secondary: "#81e496",
+        accent: "#63ded6",
       },
     },
   },
