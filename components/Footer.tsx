@@ -1,16 +1,16 @@
 const Footer: React.FC = () => {
   return (
-    <footer className="w-full bg-green-950 text-white py-4">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-center">
-        <p className="text-center sm:text-left text-sm sm:text-base">
-          &copy; 2022 • Daffodil International University
+    <footer className="w-full bg-green-950 py-4 text-white">
+      <div className="container mx-auto flex flex-col items-center justify-center px-4 sm:flex-row sm:items-center sm:justify-center sm:px-2">
+        <p className="text-center text-sm sm:text-left sm:text-base">
+          Copyright &copy; 2024
         </p>
-        <div className="ml-3 hidden sm:block">•</div>
+        <span className="hidden sm:inline-block sm:px-2 sm:text-2xl">•</span>
         <a
           href="https://dslab.daffodilvarsity.edu.bd/"
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-2 sm:mt-0 text-teal-500 hover:text-teal-300 py-2 px-4 rounded text-sm "
+          className="text-center text-sm text-teal-500 hover:text-teal-300 sm:text-left"
         >
           Daffodil International University Data Science Lab
         </a>

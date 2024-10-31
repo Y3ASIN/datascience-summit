@@ -16,8 +16,8 @@ const Navbar = () => {
 
   return (
     <nav className="bg-white shadow-md">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-28">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex h-28 items-center justify-between">
           <div className="flex items-center">
             <div className="flex-shrink-0">
               <Link href="/">
@@ -37,7 +37,7 @@ const Navbar = () => {
                     href={`/${link}`}
                     key={index}
                     passHref
-                    className="text-gray-800 hover:text-blue-600 px-3 py-2 rounded-md text-lg font-medium"
+                    className="rounded-md px-3 py-2 text-lg font-medium text-gray-800 hover:text-blue-600"
                   >
                     {link.charAt(0).toUpperCase() +
                       link.slice(1).replace("-", " ")}
@@ -52,7 +52,7 @@ const Navbar = () => {
           <div className="-mr-2 flex md:hidden">
             <button
               onClick={toggleMenu}
-              className="bg-gray-200 inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-white hover:bg-gray-600 focus:outline-none"
+              className="inline-flex items-center justify-center rounded-md bg-gray-200 p-2 text-gray-600 hover:bg-gray-600 hover:text-white focus:outline-none"
             >
               <svg
                 className="h-6 w-6"
@@ -80,18 +80,24 @@ const Navbar = () => {
       </div>
 
       {isOpen && (
-        <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            {navLinks.map((link, index) => (
-              <Link key={index} href={`/${link}`} passHref>
-                <div className="text-gray-800 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
+        <div className="blue-gradient top-30 absolute right-0 z-10 mx-4 my-2 flex min-w-[140px] rounded-xl p-6">
+          <ul className="flex list-none flex-col items-start justify-end gap-4">
+            {navLinks.map((link, i) => (
+              <li key={i}>
+                <Link
+                  href={`/${link}`}
+                  passHref
+                  className="font-montserrat text-md leading-normal text-black hover:text-blue-600"
+                >
                   {link.charAt(0).toUpperCase() +
                     link.slice(1).replace("-", " ")}
-                </div>
-              </Link>
+                </Link>
+              </li>
             ))}
-            <GradientButton text="Register Now" />
-          </div>
+            <li>
+              <GradientButton text="Register Now" />
+            </li>
+          </ul>
         </div>
       )}
     </nav>

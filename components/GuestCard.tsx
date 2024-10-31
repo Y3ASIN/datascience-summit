@@ -15,11 +15,19 @@ const GuestCard: React.FC<Props> = ({
   organization,
 }) => {
   return (
-    <div>
-      <Image src={img} width={10} height={10} alt="image" />
-      <h3> {name}</h3>
-      <p>{designation}</p>
-      <p>{organization}</p>
+    <div className="bg-white p-6 rounded-lg shadow-md max-w-xs text-center">
+      <div className="flex justify-center mb-4">
+        <Image 
+          src={img} 
+          width={80} 
+          height={80} 
+          alt="profile image" 
+          className="rounded-full object-cover"
+        />
+      </div>
+      <h3 className="text-lg font-semibold text-gray-800">{name}</h3>
+      <p className="text-sm text-gray-600">{designation}</p>
+      <p className="text-sm text-gray-500 italic">{organization}</p>
     </div>
   );
 };

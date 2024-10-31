@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 interface GradientButtonProps {
@@ -7,7 +8,8 @@ interface GradientButtonProps {
 
 const GradientButton: React.FC<GradientButtonProps> = ({ text }) => {
   return (
-    <button
+    <Link
+      href="/register"
       //   onClick={onClick}
       className="transform rounded-[20px] px-8 py-4 text-lg font-bold text-white transition duration-300 ease-in-out hover:scale-105"
       style={{
@@ -15,7 +17,7 @@ const GradientButton: React.FC<GradientButtonProps> = ({ text }) => {
       }}
     >
       {text}
-    </button>
+    </Link>
   );
 };
 
