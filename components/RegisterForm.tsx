@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 
 const RegisterForm: React.FC = () => {
@@ -34,10 +36,10 @@ const RegisterForm: React.FC = () => {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gray-100">
+    <div className="flex min-h-screen items-center justify-center bg-gray-100 px-4 sm:px-6 lg:px-8">
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-md rounded-lg bg-white p-8 shadow-md"
+        className="w-full max-w-md rounded-lg bg-white p-6 shadow-md sm:p-8"
       >
         <h2 className="mb-6 text-center text-2xl font-bold">Register</h2>
         <div className="mb-4">
