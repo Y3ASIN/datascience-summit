@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -9,9 +10,15 @@ import GradientButton from "./Button";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+
+  const handleLinkClick = (path: string) => {
+    setIsOpen(false); // Close the menu
+    router.push(path); // Navigate to the path
   };
 
   return (
@@ -84,17 +91,16 @@ const Navbar = () => {
           <ul className="flex list-none flex-col items-start justify-end gap-4">
             {navLinks.map((link, i) => (
               <li key={i}>
-                <Link
-                  href={`/${link}`}
-                  passHref
+                <button
                   className="font-montserrat text-md leading-normal text-black hover:text-blue-600"
+                  onClick={() => handleLinkClick(`/${link}`)}
                 >
                   {link.charAt(0).toUpperCase() +
                     link.slice(1).replace("-", " ")}
-                </Link>
+                </button>
               </li>
             ))}
-            <li>
+            <li className="mt-3">
               <GradientButton text="Register Now" />
             </li>
           </ul>

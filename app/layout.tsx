@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppinst.variable} antialiased bg-white`}>
+      <body className={`${poppinst.className} antialiased bg-white`}>
         <Navbar />
         <main className="max-w-full mx-auto ">{children}</main>
         <Footer />
