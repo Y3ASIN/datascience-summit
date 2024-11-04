@@ -6,14 +6,27 @@
   background: #348ed6; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
-    #c0bdbd,
+    #78b2df,
     #0b3a6f
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
     to right,
-    #c0bdbd,
-    #348ed6
+    #78b2df,
+    #637786
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.border-gradient {
+  @apply bg-gradient-to-r from-blue-500 via-purple-500 to-teal-500;
 }
 
 /* 

@@ -38,6 +38,16 @@ export const featureData = [
     gradientFrom: "#01345d", // Accent color
     gradientTo: "#78b2df", // Primary color
   },
+  {
+    title: "Artificial Intelligence Forum",
+    description:
+      "An in-depth forum on the latest advancements in AI research and applications.",
+    date: "22.05.2024",
+    location: "Hybrid",
+    tags: ["Artificial Intelligence", "Research", "Automation", "Ethics"],
+    gradientFrom: "#01345d", // Accent color
+    gradientTo: "#78b2df", // Primary color
+  },
 ];
 
 export const events: Event[] = [

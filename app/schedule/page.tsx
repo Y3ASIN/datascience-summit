@@ -2,6 +2,7 @@ import React from "react";
 
 import EventCard from "@/components/EventCard";
 import { events } from "@/constants";
+import ScheduleCard from "@/components/ScheduleCard";
 
 const Schedule: React.FC = () => {
   return (
@@ -11,7 +12,7 @@ const Schedule: React.FC = () => {
       </h1>
 
       {events.map((event) => (
-        <EventCard key={event.id} event={event} />
+        <ScheduleCard key={event.id} event={event} />
       ))}
     </section>
   );
