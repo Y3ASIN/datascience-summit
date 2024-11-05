@@ -1,4 +1,4 @@
-import SummitGallery from "@/components/SummitGllery";
+import SummitGallery from "@/components/SummitGallery";
 import React from "react";
 
 const PrevSummit: React.FC = () => {

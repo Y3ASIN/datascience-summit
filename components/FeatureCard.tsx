@@ -2,25 +2,16 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+import { EventFeaturing } from "@/constants/types";
+
 interface FeatureCardProps {
-  title: string;
-  description: string;
-  date: string;
-  location: string;
-  tags: string[];
-  gradientFrom: string;
-  gradientTo: string;
+  feature: EventFeaturing;
 }
 
-const FeatureCard: React.FC<FeatureCardProps> = ({
-  title,
-  description,
-  date,
-  location,
-  tags,
-  gradientFrom,
-  gradientTo,
-}) => {
+const FeatureCard: React.FC<FeatureCardProps> = ({ feature }) => {
+  const { title, description, date, location, tags, gradientFrom, gradientTo } =
+    feature;
+
   return (
     <div
       className="flex min-h-[480px] w-full max-w-[90%] flex-col rounded-lg p-4 text-white shadow-lg transition duration-300 hover:scale-105 sm:w-[320px] sm:p-6 md:w-[360px]"

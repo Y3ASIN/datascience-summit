@@ -28,7 +28,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ backgroundImage }) => {
         </div>
       </div>
 
-      <Countdown targetDate="2024-12-06" />
+      <Countdown targetDate="2024-12-07" />
     </section>
   );
 };

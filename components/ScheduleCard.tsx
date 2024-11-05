@@ -10,9 +10,9 @@ const ScheduleCard: React.FC<EventCardProps> = ({ event }) => {
   const { title, description, time, date, location } = event;
 
   return (
-    <section className="flex min-w-full flex-col space-x-0 space-y-3 rounded-md bg-white px-4 py-4 align-middle sm:flex-row sm:space-x-4 sm:space-y-0">
+    <section className="group flex min-w-full flex-col space-x-0 space-y-3 rounded-md bg-white px-4 py-4 align-middle shadow-xl sm:flex-row sm:space-x-4 sm:space-y-0">
       <div className="flex w-full flex-col items-start justify-center sm:w-1/3">
-        <div className="group mt-2 flex flex-col justify-start">
+        <div className="mt-2 flex flex-col justify-start">
           <h1 className="mb-2 font-poppins text-xl font-bold sm:text-2xl">
             {title}
           </h1>

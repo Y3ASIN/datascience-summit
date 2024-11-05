@@ -41,16 +41,17 @@ const Navbar = () => {
               <div className="ml-10 flex items-baseline space-x-4">
                 {navLinks.map((link, index) => (
                   <Link
-                    href={`/${link}`}
+                    href={`#${link}`}
                     key={index}
                     passHref
-                    className="rounded-md px-3 py-2 text-lg font-medium text-gray-800 hover:text-blue-600"
+                    className="rounded-md px-3 py-2 text-lg font-medium text-gray-800 hover:text-blue-600 hover:border-b-2"
                   >
                     {link.charAt(0).toUpperCase() +
                       link.slice(1).replace("-", " ")}
                   </Link>
                 ))}
               </div>
+
             </div>
           </div>
           <div className="hidden md:block">
