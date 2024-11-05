@@ -25,13 +25,14 @@ const ScheduleCard: React.FC<EventCardProps> = ({ event }) => {
 
       <div className="flex flex-col items-start justify-center space-y-1 sm:space-y-3">
         <h2 className="text-md font-bold sm:text-xl">
-          🕒 Time : <span className="text-primary">{time}</span>
+          <span>🕒 Time :</span> <span className="text-primary">{time}</span>
         </h2>
-        <h2 className="text-md sm:text-xl">
+        <h2 className="text-md font-semibold sm:text-xl">
           📅 Date : <span className="text-primary">{date}</span>{" "}
         </h2>
         <h2 className="text-md sm:text-xl">
-          📍 Location : <span>{location}</span>{" "}
+          <span className="font-semibold">📍 Location : </span>
+          <span>{location}</span>{" "}
         </h2>
       </div>
     </section>

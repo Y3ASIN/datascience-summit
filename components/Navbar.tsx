@@ -17,14 +17,14 @@ const Navbar = () => {
   };
 
   const handleLinkClick = (path: string) => {
-    setIsOpen(false); // Close the menu
-    router.push(path); // Navigate to the path
+    setIsOpen(false);
+    router.push(path);
   };
 
   return (
-    <nav className="bg-white shadow-md">
+    <nav className="bg-white py-2 shadow-md">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-28 items-center justify-between">
+        <div className="flex items-center justify-between">
           <div className="flex items-center">
             <div className="flex-shrink-0">
               <Link href="/">
