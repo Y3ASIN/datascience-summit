@@ -1,3 +1,5 @@
+//import {date, location, rightArrow} from '@/public/icons'
+
 import { Event, Guest, Summit } from "./types";
 
 export const navLinks = ["about", "schedule", "previous-summits"];

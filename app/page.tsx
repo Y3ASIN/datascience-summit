@@ -1,10 +1,12 @@
 import FeatureCard from "@/components/FeatureCard";
 import GuestCard from "@/components/GuestCard";
 import HeroSection from "@/components/Hero";
+import Location from "@/components/Location";
 import Instruction from "@/components/RegistrationInstruction";
 import ScheduleCard from "@/components/ScheduleCard";
 import SummitGallery from "@/components/SummitGallery";
 import TitleBar from "@/components/Titlebar";
+
 import { events, featureData, guests } from "@/constants";
 
 export default function Home() {
@@ -90,6 +92,11 @@ export default function Home() {
         className="mx-8 mt-10 min-h-screen max-w-96 sm:mx-auto sm:max-w-7xl"
       >
         <SummitGallery />
+      </section>
+
+      <section className="bg-slate-100 py-6">
+        <TitleBar title="Venue" subText="text-5xl" />
+        <Location />
       </section>
     </section>
   );
