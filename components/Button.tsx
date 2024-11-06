@@ -11,9 +11,9 @@ const GradientButton: React.FC<GradientButtonProps> = ({ text }) => {
     <Link
       href="/register"
       //   onClick={onClick}
-      className="transform rounded-[20px] px-8 py-4 text-lg font-bold text-white transition duration-300 ease-in-out hover:scale-105"
+      className="text-md transform text-center rounded-lg px-3 py-2 font-bold text-white transition duration-300 ease-in-out hover:scale-105 sm:rounded-[20px] sm:px-8 sm:py-4 sm:text-center sm:text-lg"
       style={{
-        background: "linear-gradient(90deg, #00dcf0, #81e496, #63ded6)",
+        background: "linear-gradient(90deg, #78b2df, #348ed6, #78b2df)",
       }}
     >
       {text}

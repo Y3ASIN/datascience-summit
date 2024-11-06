@@ -1,4 +1,6 @@
-import { Event, Summit } from "./types";
+//import {date, location, rightArrow} from '@/public/icons'
+
+import { Event, Guest, Summit } from "./types";
 
 export const navLinks = ["about", "schedule", "previous-summits"];
 
@@ -27,6 +29,16 @@ export const featureData = [
     ],
     gradientFrom: "#0b3a6f", // Secondary color
     gradientTo: "#348ed6", // Accent color
+  },
+  {
+    title: "Artificial Intelligence Forum",
+    description:
+      "An in-depth forum on the latest advancements in AI research and applications.",
+    date: "22.05.2024",
+    location: "Hybrid",
+    tags: ["Artificial Intelligence", "Research", "Automation", "Ethics"],
+    gradientFrom: "#01345d", // Accent color
+    gradientTo: "#78b2df", // Primary color
   },
   {
     title: "Artificial Intelligence Forum",
@@ -121,5 +133,64 @@ export const summits: Summit[] = [
       "/images/summit-4-2.jpg",
       "/images/summit-4-3.jpg",
     ],
+  },
+];
+
+export const guests: Guest[] = [
+  {
+    name: "Sabur Khan",
+
+    img: "/assets/sabur-khan.jpg",
+    designation: "Chairman of Daffodil",
+    organization: "Daffodil International University",
+  },
+  {
+    name: "Jane Doe",
+
+    img: "/assets/jane-doe.jpg",
+    designation: "CEO of Tech Innovate",
+    organization: "Tech Innovate Inc.",
+  },
+  {
+    name: "John Smith",
+
+    img: "/assets/john-smith.jpg",
+    designation: "Head of Research",
+    organization: "Global AI Labs",
+  },
+  {
+    name: "Emily Carter",
+
+    img: "/assets/emily-carter.jpg",
+    designation: "Lead Data Scientist",
+    organization: "Quantum Solutions",
+  },
+  {
+    name: "Michael Lee",
+
+    img: "/assets/michael-lee.jpg",
+    designation: "CTO",
+    organization: "Future Vision Technologies",
+  },
+  {
+    name: "Sophia Kim",
+
+    img: "/assets/sophia-kim.jpg",
+    designation: "Professor",
+    organization: "University of Innovation",
+  },
+  {
+    name: "Carlos Rivera",
+
+    img: "/assets/carlos-rivera.jpg",
+    designation: "Founder",
+    organization: "Green Tech Enterprises",
+  },
+  {
+    name: "Anna Johnson",
+
+    img: "/assets/anna-johnson.jpg",
+    designation: "Chief Product Officer",
+    organization: "NextGen Robotics",
   },
 ];

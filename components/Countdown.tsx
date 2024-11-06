@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect, useState } from "react";
 
 interface CountdownProps {
@@ -46,9 +48,9 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
   }, [targetDate]);
 
   return (
-    <div className="flex items-center justify-center bg-purple-700 py-8 text-white">
+    <section className="blue-gradient sm:spacey-0 flex flex-col items-center justify-center space-y-2 py-3 text-white sm:flex-row">
       <h1 className="mr-4 text-2xl font-bold">Opening In!</h1>
-      <div className="flex space-x-4 rounded-md bg-blue-400 p-4 text-black">
+      <div className="flex items-center justify-center space-x-2 rounded-md bg-secondary p-2 text-black">
         <div className="text-center">
           <span className="text-4xl font-bold">{timeLeft.days}</span>
           <div>Days</div>
@@ -66,7 +68,7 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
           <div>Seconds</div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

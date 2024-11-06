@@ -2,10 +2,12 @@ import React from "react";
 
 import GuestCard from "@/components/GuestCard";
 import TitleBar from "@/components/Titlebar";
+import { guests } from "@/constants";
+import Instruction from "@/components/RegistrationInstruction";
 
 const About: React.FC = () => {
   return (
-    <section className="mp-20 mx-8 mt-10 min-h-screen max-w-96 sm:mx-auto sm:max-w-7xl">
+    <section className="mp-20 mx-6 mt-10 min-h-screen max-w-96 sm:mx-auto sm:max-w-7xl">
       <TitleBar title="About" />
 
       <p className="text-start">
@@ -20,19 +22,18 @@ const About: React.FC = () => {
       <TitleBar title="Our Honorable Guests" subText="text-2xl" />
 
       <div className="flex flex-wrap justify-center gap-6 rounded-lg bg-gray-100 p-8 shadow-lg">
-        <GuestCard
-          name="Sabur Khan"
-          img="/assets/sabur-khan.jpg"
-          designation="Chairman of Daffodil"
-          organization="Daffodil International University"
+        {/* Guest Lists */}
+        {guests.map((guest, index) => (
+          <GuestCard key={index} guest={guest} isFirst={index === 0} />
+        ))}
+      </div>
+
+      <div className="p-5">
+        <TitleBar
+          title="Get Set to Compete, Learn, and Win Big!"
+          subText="text-3xl"
         />
-        <GuestCard
-          name="Jane Doe"
-          img="/assets/jane-doe.jpg"
-          designation="Vice President of Meta"
-          organization="Tech Corp DIU "
-        />
-        {/* Add more GuestCard components as needed */}
+        <Instruction />
       </div>
     </section>
   );

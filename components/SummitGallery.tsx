@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 
 import { summits } from "@/constants";
+import TitleBar from "./Titlebar";
 
 // Lightbox component to display selected image
 const Lightbox: React.FC<{ image: string; onClose: () => void }> = ({
@@ -40,7 +41,7 @@ const SummitGallery: React.FC = () => {
 
   return (
     <section className="mx-4 mt-10 max-w-full">
-      <h1 className="mb-6 text-center text-2xl font-bold">Previous Summits</h1>
+      <TitleBar title="Previous Summits" subText="text-3xl" />
       <div className="flex flex-col gap-8">
         {summits.map((summit) => (
           <div key={summit.id} className="w-full space-y-4">

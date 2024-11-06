@@ -1,33 +1,34 @@
 import Image from "next/image";
 import React from "react";
 
+import { Guest } from "@/constants/types";
+
 interface Props {
-  img: string;
-  name: string;
-  designation: string;
-  organization: string;
+  guest: Guest;
+  isFirst: boolean;
 }
 
-const GuestCard: React.FC<Props> = ({
-  name,
-  img,
-  designation,
-  organization,
-}) => {
+const GuestCard: React.FC<Props> = ({ guest, isFirst }) => {
+  const { name, img, designation, organization } = guest;
+
   return (
-    <div className="bg-white p-6 rounded-lg shadow-md max-w-xs text-center">
-      <div className="flex justify-center mb-4">
-        <Image 
-          src={img} 
-          width={80} 
-          height={80} 
-          alt="profile image" 
+    <div
+      className={`max-w-xs rounded-lg bg-white p-6 text-center shadow-md ${isFirst ? "flex flex-row items-center space-x-4" : ""}`}
+    >
+      <div className="mb-4 flex justify-center">
+        <Image
+          src={img}
+          width={80}
+          height={80}
+          alt="profile image"
           className="rounded-full object-cover"
         />
       </div>
-      <h3 className="text-lg font-semibold text-gray-800">{name}</h3>
-      <p className="text-sm text-gray-600">{designation}</p>
-      <p className="text-sm text-gray-500 italic">{organization}</p>
+      <div>
+        <h3 className="text-lg font-semibold text-gray-800">{name}</h3>
+        <p className="text-sm text-gray-600">{designation}</p>
+        <p className="text-sm italic text-gray-500">{organization}</p>
+      </div>
     </div>
   );
 };
