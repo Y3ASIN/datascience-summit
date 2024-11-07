@@ -1,7 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
-import { useRouter } from "next/navigation";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -10,19 +9,43 @@ import GradientButton from "./Button";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const router = useRouter();
+  const [showScrollButton, setShowScrollButton] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
-  const handleLinkClick = (path: string) => {
+  const handleLinkClick = (sectionId: string) => {
     setIsOpen(false);
-    router.push(path);
+
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
   };
 
+  const handleScroll = () => {
+    const heroHeight = document.getElementById("hero")?.offsetHeight;
+    setShowScrollButton(window.scrollY > heroHeight!);
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className="bg-white py-2 shadow-md">
+    <nav className="sticky top-0 z-50 w-full bg-white py-2 shadow-md">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
@@ -40,18 +63,16 @@ const Navbar = () => {
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
                 {navLinks.map((link, index) => (
-                  <Link
-                    href={`#${link}`}
+                  <button
                     key={index}
-                    passHref
-                    className="rounded-md px-3 py-2 text-lg font-medium text-gray-800 hover:text-blue-600 hover:border-b-2"
+                    onClick={() => handleLinkClick(link)}
+                    className="rounded-md px-3 py-2 text-lg font-medium text-gray-800 hover:border-b-2 hover:text-blue-600"
                   >
                     {link.charAt(0).toUpperCase() +
                       link.slice(1).replace("-", " ")}
-                  </Link>
+                  </button>
                 ))}
               </div>
-
             </div>
           </div>
           <div className="hidden md:block">
@@ -88,13 +109,13 @@ const Navbar = () => {
       </div>
 
       {isOpen && (
-        <div className="blue-gradient top-30 absolute right-0 z-10 mx-4 my-2 flex min-w-[140px] rounded-xl p-6">
+        <div className="blue-gradient absolute right-0 top-20 z-50 mx-4 my-2 flex min-w-[140px] rounded-xl p-6">
           <ul className="flex list-none flex-col items-start justify-end gap-4">
             {navLinks.map((link, i) => (
               <li key={i}>
                 <button
-                  className="font-montserrat text-md leading-normal text-black hover:text-blue-600"
-                  onClick={() => handleLinkClick(`/${link}`)}
+                  className="text-md font-poppins leading-normal text-black hover:text-blue-600"
+                  onClick={() => handleLinkClick(link)}
                 >
                   {link.charAt(0).toUpperCase() +
                     link.slice(1).replace("-", " ")}
@@ -106,6 +127,17 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
+      )}
+
+      {/* Back to Top Button */}
+
+      {showScrollButton && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-8 right-8 rounded-full bg-blue-400 p-3 font-bold text-white shadow-md transition-all duration-150 hover:scale-105 hover:bg-blue-600 focus:outline-none"
+        >
+          ↑
+        </button>
       )}
     </nav>
   );

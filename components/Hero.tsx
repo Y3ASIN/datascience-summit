@@ -9,7 +9,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ backgroundImage }) => {
   return (
     <section className="relative">
       <div
-        className="relative mb-0 flex h-80  w-full items-center justify-center bg-cover bg-center"
+        className="relative mb-0 flex h-80 w-full items-center justify-center bg-cover bg-center"
         style={{
           backgroundImage: `url(${backgroundImage})`,
         }}

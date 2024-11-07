@@ -111,18 +111,18 @@ export const summits: Summit[] = [
     id: 1,
     title: "1st Summit",
     images: [
-      "/images/summit-2-1.jpg",
-      "/images/summit-2-2.jpg",
-      "/images/summit-2-3.jpg",
+      "/1st-summit/p1.png",
+      "/1st-summit/p2.png",
+      "/1st-summit/p3.png",
     ],
   },
   {
     id: 2,
     title: "2nd Summit",
     images: [
-      "/images/summit-3-1.jpg",
-      "/images/summit-3-2.jpg",
-      "/images/summit-3-3.jpg",
+      "/2nd-summit/p1.svg",
+      "/2nd-summit/p2.svg",
+      "/2nd-summit/p3.svg",
     ],
   },
   {
