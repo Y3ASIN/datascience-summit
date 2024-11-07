@@ -20,9 +20,9 @@ const Location: React.FC = () => {
       {/* <hr className="block sm:hidden bg-slate-500 mt-2" /> */}
 
       <div className="flex h-full flex-col justify-start gap-3 rounded-md bg-blue-300 p-8 sm:gap-1 sm:space-y-10">
-        <div className="flex flex-col items-center justify-center rounded-md bg-slate-300 px-14 py-3 shadow-lg sm:flex-row sm:gap-2 sm:px-24 sm:py-1">
+        <div className="flex flex-col items-center justify-center rounded-md bg-white px-14 py-3 shadow-lg sm:flex-row sm:gap-2 sm:px-24 sm:py-1">
           <div className="px-10 py-4 text-center">
-            <h3 className="text-5xl">
+            <h3 className="text-5xl mb-1">
               <Image
                 alt="date"
                 src={"/icons/date.svg"}
@@ -33,13 +33,13 @@ const Location: React.FC = () => {
             <h3 className="text-xl font-semibold">Date </h3>
           </div>
 
-          <div className="py-2 text-xl sm:text-2xl">
-            <p>December 07, 2024 </p>
-            <p>Saturday 9AM - 5PM</p>
+          <div className="py-2">
+            <p className="text-[19px] sm:text-xl">December 07, 2024 </p>
+            <p className="text-[18px] sm:text-xl" >Saturday 9AM - 5PM</p>
           </div>
         </div>
 
-        <div className="flex flex-col items-center justify-center rounded-md bg-slate-300 py-3 shadow-lg sm:flex-row sm:gap-2 sm:px-24 sm:py-1">
+        <div className="flex flex-col items-center justify-center rounded-md bg-white py-3 shadow-lg sm:flex-row sm:gap-2 sm:px-24 sm:py-1">
           <div className="px-10 py-4">
             <h3 className="text-center text-5xl">
               <Image
@@ -52,21 +52,13 @@ const Location: React.FC = () => {
             <h3 className="text-xl font-semibold">Location </h3>
           </div>
 
-          <div className="py-2 text-xl sm:text-2xl">
-            <p className="text-md sm:text-2xl">
+          <div className="py-2">
+            <p className="text-[19px] sm:text-2xl">
               Daffodil Smart City,<span className="block">Ashulia, Dhaka.</span>
             </p>
           </div>
         </div>
 
-        {/* <div className="flex flex-row">
-          <h3 className="text-md sm:text-xl">
-            📍 <span>Location &gt; </span>
-          </h3>
-          <p className="text-base sm:text-3xl">
-            Daffodil Smart City, Ashulia, Dhaka.
-          </p>
-          </div> */}
       </div>
     </section>
   );

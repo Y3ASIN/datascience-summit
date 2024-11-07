@@ -2,8 +2,11 @@ import FeatureCard from "@/components/FeatureCard";
 import GuestCard from "@/components/GuestCard";
 import HeroSection from "@/components/Hero";
 import Location from "@/components/Location";
+import Organizers from "@/components/Organizers";
+import Partners from "@/components/Partners";
 import Instruction from "@/components/RegistrationInstruction";
 import ScheduleCard from "@/components/ScheduleCard";
+import SmallDes from "@/components/SmallDes";
 import SummitGallery from "@/components/SummitGallery";
 import TitleBar from "@/components/Titlebar";
 
@@ -14,13 +17,16 @@ export default function Home() {
     <section className="min-h-dvh w-full space-y-5">
       <HeroSection backgroundImage="/backpic.jpg" />
 
-      <TitleBar title="Events" />
+      <section className="group">
+        <TitleBar title="Events" />
+        <SmallDes />
 
-      <div className="flex flex-wrap justify-center gap-8 bg-background p-8">
-        {featureData.map((feature, index) => (
-          <FeatureCard feature={feature} key={index} />
-        ))}
-      </div>
+        <div className="flex flex-wrap justify-center gap-8 bg-background p-8">
+          {featureData.map((feature, index) => (
+            <FeatureCard feature={feature} key={index} />
+          ))}
+        </div>
+      </section>
 
       {/* <CardContainer>
         {featureData.map((feature, index) => (
@@ -40,7 +46,7 @@ export default function Home() {
       {/* About Page */}
       <section
         id="about"
-        className="mp-20 mx-6 mt-10 min-h-screen max-w-96 sm:mx-auto sm:max-w-7xl"
+        className="p-20 mx-6 mt-10 min-h-screen max-w-96 sm:mx-auto sm:max-w-7xl"
       >
         <TitleBar title="About" />
 
@@ -94,9 +100,19 @@ export default function Home() {
         <SummitGallery />
       </section>
 
-      <section className="bg-slate-100 py-6">
+      <section className="group my-6 mb-4 bg-slate-100 py-6">
         <TitleBar title="Venue" subText="text-5xl" />
         <Location />
+      </section>
+
+      <section className="group">
+        <TitleBar title="Organizers" subText="text-3xl" />
+        <Organizers />
+      </section>
+
+      <section>
+        <TitleBar title="Partner" subText="text-3xl" />
+        <Partners />
       </section>
     </section>
   );

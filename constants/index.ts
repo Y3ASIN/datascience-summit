@@ -47,8 +47,8 @@ export const featureData = [
     date: "22.05.2024",
     location: "Hybrid",
     tags: ["Artificial Intelligence", "Research", "Automation", "Ethics"],
-    gradientFrom: "#01345d", // Accent color
-    gradientTo: "#78b2df", // Primary color
+    gradientFrom: "#348ed6", // Accent color
+    gradientTo: "#005b92", // Primary color
   },
 ];
 
