@@ -46,7 +46,7 @@ export default function Home() {
       {/* About Page */}
       <section
         id="about"
-        className="p-20 mx-6 mt-10 min-h-screen max-w-96 sm:mx-auto sm:max-w-7xl"
+        className="mx-1 mt-10 w-full p-5 sm:mx-auto sm:max-w-7xl sm:p-20"
       >
         <TitleBar title="About" />
 
@@ -69,7 +69,7 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="p-5">
+        <div>
           <TitleBar
             title="Get Set to Compete, Learn, and Win Big!"
             subText="text-3xl"
@@ -79,13 +79,11 @@ export default function Home() {
       </section>
 
       {/* Schedule Page */}
+      
       <section
         id="schedule"
         className="mx-8 mt-10 flex min-h-screen max-w-full flex-col items-center justify-center gap-4 rounded-sm bg-gray-100 p-4 sm:mx-auto sm:max-w-7xl sm:flex-row sm:flex-wrap sm:px-8"
       >
-        {/* <h1 className="mb-6 w-full text-center text-2xl font-bold sm:text-left">
-        Schedule
-      </h1> */}
         <TitleBar title="Schedule" />
 
         {events.map((event) => (
