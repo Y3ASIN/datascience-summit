@@ -110,20 +110,12 @@ export const summits: Summit[] = [
   {
     id: 1,
     title: "1st Summit",
-    images: [
-      "/1st-summit/p1.png",
-      "/1st-summit/p2.png",
-      "/1st-summit/p3.png",
-    ],
+    images: ["/1st-summit/p1.png", "/1st-summit/p2.png", "/1st-summit/p3.png"],
   },
   {
     id: 2,
     title: "2nd Summit",
-    images: [
-      "/2nd-summit/p1.svg",
-      "/2nd-summit/p2.svg",
-      "/2nd-summit/p3.svg",
-    ],
+    images: ["/2nd-summit/p1.svg", "/2nd-summit/p2.svg", "/2nd-summit/p3.svg"],
   },
   {
     id: 3,
@@ -138,11 +130,11 @@ export const summits: Summit[] = [
 
 export const guests: Guest[] = [
   {
-    name: "Sabur Khan",
+    name: "Jhone Doe",
 
     img: "/assets/sabur-khan.jpg",
-    designation: "Chairman of Daffodil",
-    organization: "Daffodil International University",
+    designation: "Chairman",
+    organization: "DIU",
   },
   {
     name: "Jane Doe",
