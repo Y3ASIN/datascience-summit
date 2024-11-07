@@ -15,7 +15,9 @@ import { events, featureData, guests } from "@/constants";
 export default function Home() {
   return (
     <section className="min-h-dvh w-full space-y-5">
-      <HeroSection backgroundImage="/backpic.jpg" />
+      <section id="hero">
+        <HeroSection backgroundImage="/backpic.jpg" />
+      </section>
 
       <section className="group">
         <TitleBar title="Events" />
@@ -79,7 +81,7 @@ export default function Home() {
       </section>
 
       {/* Schedule Page */}
-      
+
       <section
         id="schedule"
         className="mx-8 mt-10 flex min-h-screen max-w-full flex-col items-center justify-center gap-4 rounded-sm bg-gray-100 p-4 sm:mx-auto sm:max-w-7xl sm:flex-row sm:flex-wrap sm:px-8"
@@ -108,7 +110,7 @@ export default function Home() {
         <Organizers />
       </section>
 
-      <section>
+      <section className="group">
         <TitleBar title="Partner" subText="text-3xl" />
         <Partners />
       </section>
