@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -10,17 +11,22 @@ import GradientButton from "./Button";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showScrollButton, setShowScrollButton] = useState(false);
+  const router = useRouter();
+  const pathname = usePathname();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
-  const handleLinkClick = (sectionId: string) => {
+  const handleLinkClick = (link: string) => {
     setIsOpen(false);
-
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (pathname === "/") {
+      const section = document.getElementById(link);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    } else {
+      router.push(`/#{link}`);
     }
   };
 
@@ -66,12 +72,19 @@ const Navbar = () => {
                   <button
                     key={index}
                     onClick={() => handleLinkClick(link)}
-                    className="rounded-md px-3 py-2 text-lg font-medium text-gray-800 hover:border-b-2 hover:text-blue-600"
+                    className="rounded-md border-b-2 border-transparent px-3 py-2 text-lg font-medium text-gray-800 hover:border-blue-600 hover:text-blue-600"
                   >
                     {link.charAt(0).toUpperCase() +
                       link.slice(1).replace("-", " ")}
                   </button>
                 ))}
+
+                <Link
+                  href="/about"
+                  className="rounded-md border-b-2 border-transparent px-3 py-2 text-lg font-medium text-gray-800 hover:border-blue-600 hover:text-blue-600"
+                >
+                  Event Details
+                </Link>
               </div>
             </div>
           </div>
@@ -114,7 +127,7 @@ const Navbar = () => {
             {navLinks.map((link, i) => (
               <li key={i}>
                 <button
-                  className="text-md font-poppins leading-normal text-black hover:text-blue-600"
+                  className="text-md font-poppins leading-normal text-white hover:text-blue-600"
                   onClick={() => handleLinkClick(link)}
                 >
                   {link.charAt(0).toUpperCase() +
@@ -122,6 +135,14 @@ const Navbar = () => {
                 </button>
               </li>
             ))}
+            <li>
+              <Link
+                href="/about"
+                className="text-md font-poppins leading-normal text-white hover:text-blue-600"
+              >
+                Event Details
+              </Link>
+            </li>
             <li className="mt-3">
               <GradientButton text="Register Now" />
             </li>
@@ -134,7 +155,7 @@ const Navbar = () => {
       {showScrollButton && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 rounded-full bg-blue-400 p-3 font-bold text-white shadow-md transition-all duration-150 hover:scale-105 hover:bg-blue-600 focus:outline-none"
+          className="fixed bottom-8 right-5 rounded-full bg-blue-400 p-3 font-bold text-white shadow-md transition-all duration-150 hover:scale-105 hover:bg-blue-600 focus:outline-none sm:right-8"
         >
           ↑
         </button>

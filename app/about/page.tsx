@@ -1,14 +1,15 @@
 import React from "react";
 
-import GuestCard from "@/components/GuestCard";
-import TitleBar from "@/components/Titlebar";
-import { guests } from "@/constants";
-import Instruction from "@/components/RegistrationInstruction";
+// import GuestCard from "@/components/GuestCard";
+// import TitleBar from "@/components/Titlebar";
+// import { guests } from "@/constants";
+// import Instruction from "@/components/RegistrationInstruction";
+import EventDetails from "@/components/EventDetails";
 
 const About: React.FC = () => {
   return (
     <section className="mp-20 mx-6 mt-10 min-h-screen max-w-96 sm:mx-auto sm:max-w-7xl">
-      <TitleBar title="About" />
+      {/* <TitleBar title="About" />
 
       <p className="text-start">
         The world is becoming increasingly data-driven, and Daffodil
@@ -23,7 +24,7 @@ const About: React.FC = () => {
 
       <div className="flex flex-wrap justify-center gap-6 rounded-lg bg-gray-100 p-8 shadow-lg">
         {/* Guest Lists */}
-        {guests.map((guest, index) => (
+      {/* guests.map((guest, index) => (
           <GuestCard key={index} guest={guest} isFirst={index === 0} />
         ))}
       </div>
@@ -34,7 +35,9 @@ const About: React.FC = () => {
           subText="text-3xl"
         />
         <Instruction />
-      </div>
+      </div> */}
+
+      <EventDetails />
     </section>
   );
 };

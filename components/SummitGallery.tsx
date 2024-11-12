@@ -6,27 +6,6 @@ import Image from "next/image";
 import { summits } from "@/constants";
 import TitleBar from "./Titlebar";
 
-// Lightbox component to display selected image
-// const Lightbox: React.FC<{ image: string; onClose: () => void }> = ({
-//   image,
-//   onClose,
-// }) => {
-//   return (
-//     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75">
-//       <Image
-//         src={image}
-//         alt="Lightbox"
-//         className="max-h-full max-w-full"
-//         onClick={onClose}
-//         width={100}
-//         height={100}
-//       />
-//       <button onClick={onClose} className="absolute right-4 top-4 text-white">
-//         ✖
-//       </button>
-//     </div>
-//   );
-// };
 
 const SummitGallery: React.FC = () => {
 
