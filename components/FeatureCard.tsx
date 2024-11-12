@@ -14,7 +14,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ feature }) => {
 
   return (
     <div
-      className="flex min-h-[480px] w-full max-w-[90%] flex-col rounded-lg p-4 text-white shadow-lg transition duration-300 hover:scale-105 sm:w-[320px] sm:p-6 md:w-[360px]"
+      className="gird-col-1 sm:grid-col-3 grid min-h-[480px] w-full max-w-[90%] flex-col rounded-lg p-4 text-white shadow-lg transition duration-300 hover:scale-105 sm:w-[320px] sm:p-6 md:w-[360px]"
       style={{
         background: `linear-gradient(135deg, ${gradientFrom}, ${gradientTo})`,
       }}
