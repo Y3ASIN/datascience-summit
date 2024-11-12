@@ -198,3 +198,26 @@ export const guests: Guest[] = [
     organization: "NextGen Robotics",
   },
 ];
+
+export const formLinks = [
+  {
+    title: "Data Hackathon",
+    link: "https://forms.gle/eYQLEmVesAPe2cAr9",
+  },
+  {
+    title: "Project Competition",
+    link: "https://forms.gle/qMPo8jeAb8vbNShD9",
+  },
+  {
+    title: "Idea Poster Presentation",
+    link: "https://forms.gle/sJSJJQnmZJS7EYVo7",
+  },
+  {
+    title: "Promptcraft Challenge",
+    link: "https://forms.gle/ppXCMi5xxikqL8zD9",
+  },
+  {
+    title: "Hands-On Workshop",
+    link: "https://forms.gle/q1G9g63CQpS3D2zJ8",
+  },
+];

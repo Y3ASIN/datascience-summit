@@ -1,18 +1,21 @@
-"use client";
-
 import React from "react";
+import TitleBar from "./Titlebar";
+import RegisterButton from "./RegisterButton";
+import { formLinks } from "@/constants";
 
 const RegisterForm: React.FC = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center rounded-md py-2 sm:py-5 bg-gray-100 px-4 sm:px-6 lg:px-8">
-      <iframe
-        src="https://docs.google.com/forms/d/e/1FAIpQLSfpiBG_qFkV1U2uiCmx4VdlQBTZG1rgAw0x8SnBwbx6RYfx2w/viewform?embedded=true"
-        width="640"
-        height="983"
-      >
-        Loading…
-      </iframe>
-    </div>
+    <section className="min-h-screen shadow-xl rounded-md bg-gray-100 px-4 py-2 sm:px-6 sm:py-5 lg:px-8 group">
+      <TitleBar
+        title="Choose Your Events and Register to Participate!"
+        subText="text-3xl"
+      />
+      <div className="grid-col-1 grid gap-5 sm:grid-cols-3">
+        {formLinks.map((links) => (
+          <RegisterButton key={links.title} links={links} />
+        ))}
+      </div>
+    </section>
   );
 };
 
