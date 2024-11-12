@@ -65,9 +65,12 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ feature }) => {
       </div>
 
       <div className="mt-auto flex flex-col space-y-2 sm:flex-row sm:space-x-2 sm:space-y-0">
-        <button className="rounded-lg bg-white px-3 py-2 text-sm text-gray-900 hover:bg-gray-300">
+        <Link
+          href="/register"
+          className="rounded-lg bg-white px-3 py-2 text-sm text-gray-900 hover:bg-gray-300"
+        >
           Register Now
-        </button>
+        </Link>
         <Link
           href="/about"
           className="rounded-lg border border-white px-3 py-2 text-sm text-white hover:bg-white hover:text-gray-900"

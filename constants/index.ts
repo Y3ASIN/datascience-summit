@@ -6,102 +6,114 @@ export const navLinks = ["about", "schedule", "previous-summits"];
 
 export const featureData = [
   {
-    title: "Data Science Summit",
+    title: "Data Hackathon",
     description:
-      "The main edition of the conference dedicated to all issues in data science.",
-    date: "21.11.2024",
-    location: "Online",
+      "Get ready for the ultimate challenge at the Data Hackathon! Join data enthusiasts, AI experts, and innovators as they come together to tackle real-world problems, push the limits of machine learning, and dive into the exciting world of big data and AI!",
+    date: "11.12.2024",
+    location: "Daffodil Smart City, Birulia, Dhaka-1216",
     tags: ["ML / AI", "Deep Learning", "Big Data", "AI Ethics"],
     gradientFrom: "#005b92", // Primary color
     gradientTo: "#78b2df", // Secondary color
   },
   {
-    title: "Machine Learning Edition",
+    title: "Project Competition",
     description:
-      "A special edition dedicated to machine learning and artificial intelligence.",
-    date: "13.06.2024",
-    location: "PGE Narodowy, Warsaw",
-    tags: [
-      "Machine Learning",
-      "AI Use Cases",
-      "Data Science",
-      "Computer Vision",
-    ],
+      "Showcase your innovative projects and compete with others in a high-energy event celebrating tech creativity and practical solutions.",
+    date: "11.12.2024",
+    location: "Daffodil Smart City, Birulia, Dhaka-1216",
+    tags: ["Innovation", "Tech Projects", "Prototyping", "Showcase"],
     gradientFrom: "#0b3a6f", // Secondary color
     gradientTo: "#348ed6", // Accent color
   },
   {
-    title: "Artificial Intelligence Forum",
+    title: "Promptcraft Challenge",
     description:
-      "An in-depth forum on the latest advancements in AI research and applications.",
-    date: "22.05.2024",
-    location: "Hybrid",
-    tags: ["Artificial Intelligence", "Research", "Automation", "Ethics"],
-    gradientFrom: "#01345d", // Accent color
-    gradientTo: "#78b2df", // Primary color
+      "Unleash your creativity by crafting powerful and impactful prompts in this engaging, interactive challenge designed for aspiring creators and innovators.",
+    date: "11.12.2024",
+    location: "Daffodil Smart City, Birulia, Dhaka-1216",
+    tags: ["Creativity", "Writing", "Prompt Engineering", "Innovation"],
+    gradientFrom: "#01345d",
+    gradientTo: "#78b2df",
   },
   {
-    title: "Artificial Intelligence Forum",
+    title: "Hands-On Workshop",
     description:
-      "An in-depth forum on the latest advancements in AI research and applications.",
-    date: "22.05.2024",
-    location: "Hybrid",
-    tags: ["Artificial Intelligence", "Research", "Automation", "Ethics"],
+      "Engage in practical, skill-building sessions led by experts on cutting-edge topics.",
+    date: "11.12.2024",
+    location: "Daffodil Smart City, Birulia, Dhaka-1216",
+    tags: [
+      "Skill Development",
+      "Practical Learning",
+      "Interactive",
+      "Hands-On",
+      "Professional Growth",
+    ],
     gradientFrom: "#348ed6", // Accent color
     gradientTo: "#005b92", // Primary color
+  },
+  {
+    title: "Idea Poster Presentation",
+    description:
+      "Showcase your innovative ideas on AI, automation, and ethics in an engaging poster presentation, sparking insights and discussions with experts.",
+    date: "11.12.2024",
+    location: "Daffodil Smart City, Birulia, Dhaka-1216",
+    tags: [
+      "Creative Ideas",
+      "Poster Session",
+      "Inspiration",
+      "Showcase",
+      "Knowledge Sharing",
+    ],
+    gradientFrom: "#0b3a6f", // Accent color
+    gradientTo: "#78b2df", // Primary color
   },
 ];
 
 export const events: Event[] = [
   {
     id: 1,
-    title: "Poster Presentation",
+    title: "Data Hackathon",
     description:
-      "Showcase your research through engaging posters and get feedback from peers and mentors.",
-    date: "February 10, 2024",
-    time: "10:00 AM - 1:00 PM",
-    location: "Daffodil International University - Main Hall",
-    image: "/assets/events/Poster_presentation.png",
+      "Join us for a weekend of coding, innovation, and collaboration to solve real-world problems.",
+    date: "December 11, 2024",
+    time: "09:00 AM - 05:00 PM",
+    location: "Daffodil Smart City, Birulia, Dhaka-1216",
   },
   {
     id: 2,
-    title: "Workshop",
-    description:
-      "Participate in hands-on workshops covering various topics in technology and innovation.",
-    date: "February 15, 2024",
-    time: "1:00 PM - 5:00 PM",
-    location: "Daffodil International University - Room 202",
-    image: "/assets/events/Workshops.jpg",
-  },
-  {
-    id: 3,
-    title: "Hackathon",
-    description:
-      "Join us for a weekend of coding, innovation, and collaboration to solve real-world problems.",
-    date: "March 15-17, 2024",
-    time: "10:00 AM - 6:00 PM",
-    location: "Daffodil International University - Computer Lab",
-    image: "/images/hackathon.jpg",
-  },
-  {
-    id: 4,
-    title: "Prompt Challenge",
-    description:
-      "Test your creativity and skill in this exciting prompt-based challenge.",
-    date: "March 25, 2024",
-    time: "9:00 AM - 12:00 PM",
-    location: "Daffodil International University - Auditorium",
-    image: "/images/prompt-challenge.jpg",
-  },
-  {
-    id: 5,
     title: "Project Competition",
     description:
       "Showcase your projects and compete for prizes with the best teams in the university.",
-    date: "April 5, 2024",
-    time: "10:00 AM - 4:00 PM",
-    location: "Daffodil International University - Exhibition Center",
-    image: "/images/project-competition.jpg",
+    date: "December 11, 2024",
+    time: "09:00 AM - 05:00 PM",
+    location: "Daffodil Smart City, Birulia, Dhaka-1216",
+  },
+  {
+    id: 3,
+    title: "Promptcraft Challenge",
+    description:
+      "Test your creativity and skill in this exciting prompt-based challenge.",
+    date: "December 11, 2024",
+    time: "09:00 AM - 05:00 PM",
+    location: "Daffodil Smart City, Birulia, Dhaka-1216",
+  },
+  {
+    id: 4,
+    title: "Hands-On Workshop",
+    description:
+      "Participate in hands-on workshops covering various topics in technology and innovation.",
+    date: "December 11, 2024",
+    time: "09:00 AM - 05:00 PM",
+    location: "Daffodil Smart City, Birulia, Dhaka-1216",
+  },
+  {
+    id: 5,
+    title: "Idea Poster Presentation",
+    description:
+      "Showcase your research through engaging posters and get feedback from peers and mentors.",
+    date: "December 11, 2024",
+    time: "09:00 AM - 05:00 PM",
+    location: "Daffodil Smart City, Birulia, Dhaka-1216",
   },
 ];
 
