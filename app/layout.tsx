@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 import "../styles/globals.css";
-import { poppinst } from "@/styles/fonts";
+import { poppins } from "@/styles/fonts";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppinst.className} antialiased bg-white`}>
+      <body className={`${poppins.variable} antialiased bg-white`}>
         <Navbar />
         <main className="max-w-full mx-auto ">{children}</main>
         <Footer />

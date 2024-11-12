@@ -5,7 +5,6 @@ export interface Event {
   date: string;
   time: string;
   location: string;
-
 }
 
 export interface Summit {
@@ -29,4 +28,9 @@ export interface EventFeaturing {
   tags: string[];
   gradientFrom: string;
   gradientTo: string;
+}
+
+export interface formLink {
+  title: string;
+  link: string;
 }
