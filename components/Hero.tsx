@@ -21,14 +21,14 @@ const HeroSection: React.FC<HeroSectionProps> = ({ backgroundImage }) => {
             DIU Data Science Summit
           </h1>
           <h3 className="relative flex w-3/5 flex-col rounded-md bg-gray-600 bg-opacity-60 px-1 py-2 text-center text-[10px] font-bold text-blue-300 sm:flex-row sm:text-xl">
-            December 20, 2024 <span className="hidden sm:block"> • </span>{" "}
+            December 11, 2024 <span className="hidden sm:block"> • </span>{" "}
             <br className="block sm:hidden" />
             Daffodil Smart City, Ashulia
           </h3>
         </div>
       </div>
 
-      <Countdown targetDate="2024-12-07" />
+      <Countdown targetDate="2024-12-11" />
     </section>
   );
 };
