@@ -1,9 +1,5 @@
 import React from "react";
 
-// import GuestCard from "@/components/GuestCard";
-// import TitleBar from "@/components/Titlebar";
-// import { guests } from "@/constants";
-// import Instruction from "@/components/RegistrationInstruction";
 import EventDetails from "@/components/EventDetails";
 import { summitEventsData } from "@/constants";
 
