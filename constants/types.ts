@@ -34,3 +34,25 @@ export interface formLink {
   title: string;
   link: string;
 }
+
+type Fee = {
+  type: string;
+  cost: string;
+};
+
+type Prize = {
+  position: string;
+  amount: string;
+};
+
+export interface Section  {
+  title: string;
+  description: string;
+  points?: string[];
+  details?: string[];
+  fee?: Fee[];
+  steps?: string[];
+  benefits?: string;
+  prizes?: Prize[];
+  totalPrizePool?: string;
+};

@@ -221,3 +221,121 @@ export const formLinks = [
     link: "https://forms.gle/q1G9g63CQpS3D2zJ8",
   },
 ];
+
+export const summitEventsData = [
+  {
+    title: "Poster Presentation",
+    description: "Showcase innovative ideas on AI in Education at the 4th Data Science Summit 2024.",
+    goals: [
+      "Encourage innovative thinking in AI for Education.",
+      "Promote research and analytical skills.",
+      "Improve communication and presentation skills.",
+      "Highlight the positive impact of AI on learning."
+    ],
+    eligibility: [
+      "Open to university, college, and school students with a valid student ID.",
+      "Individual or team submissions (max 2 members per team).",
+      "Each participant or team can submit only one poster."
+    ],
+    registration: {
+      fee: [
+        { type: "Individual Participant", cost: "500 BDT" },
+        { type: "Team (2 Members)", cost: "1,000 BDT" }
+      ],
+      steps: [
+        "Online Registration: Register here. Deadline: [Date]",
+        "Topic & Abstract Submission: Submit by [Date]",
+        "Poster Submission: Digital posters (PDF format) by [Deadline]"
+      ],
+      benefits: "All participants receive a T-shirt, souvenirs, and certificates."
+    },
+    evaluationCriteria: [
+      { criterion: "Relevance to Theme", weight: "20%" },
+      { criterion: "Innovation & Creativity", weight: "25%" },
+      { criterion: "Clarity & Organization", weight: "15%" },
+      { criterion: "Technical Depth", weight: "20%" },
+      { criterion: "Visual Design", weight: "10%" },
+      { criterion: "Q&A Session", weight: "10%" }
+    ],
+    prizes: [
+      { position: "1st Place", amount: "3,000 BDT" },
+      { position: "2nd Place", amount: "2,000 BDT" },
+      { position: "3rd Place", amount: "1,000 BDT" }
+    ],
+    totalPrizePool: "6,000 BDT"
+  },
+  {
+    title: "PromptCraft Challenge",
+    description: "Test and refine your prompt engineering skills to generate precise AI outputs relevant to education.",
+    goals: [
+      "Master prompt engineering for effective AI output generation.",
+      "Promote innovative prompt crafting approaches for education.",
+      "Demonstrate prompt-driven AI applications in education, focusing on challenges such as personalized learning, engagement, and accessibility."
+    ],
+    eligibility: [
+      "Open to university, college, and school students with a valid student ID.",
+      "Individual participation only.",
+      "Each participant may submit only one prompt."
+    ],
+    registration: {
+      fee: [{ type: "Individual Participant", cost: "100 BDT" }],
+      steps: [
+        "Online Registration: Register here. Deadline: [Date]",
+        "Prompt Challenge Event: 2:30 PM - 3:30 PM, December 11, 2024, at Daffodil Smart City."
+      ],
+      benefits: "Each participant receives a certificate, T-shirt, and snacks."
+    },
+    evaluationCriteria: [
+      { criterion: "Relevance to Theme", weight: "25%" },
+      { criterion: "Prompt Accuracy", weight: "30%" },
+      { criterion: "Creativity", weight: "20%" },
+      { criterion: "Efficiency", weight: "15%" },
+      { criterion: "Presentation Skills", weight: "10%" }
+    ],
+    prizes: [
+      { position: "1st Place", amount: "3,000 BDT" },
+      { position: "2nd Place", amount: "2,000 BDT" },
+      { position: "3rd Place", amount: "1,000 BDT" }
+    ],
+    totalPrizePool: "6,000 BDT"
+  },
+  {
+    title: "Project Showcasing",
+    description: "Showcase innovative AI-driven solutions for educational challenges at the 4th Data Science Summit 2024.",
+    goals: [
+      "Promote the development of AI solutions for improving education quality, accessibility, and engagement.",
+      "Encourage practical data science applications targeting educational challenges.",
+      "Provide a platform for feedback from academic and industry experts.",
+      "Recognize outstanding projects with innovative approaches, scalability, and impact."
+    ],
+    eligibility: [
+      "Open to students, researchers, and professionals in data science or related fields.",
+      "Team size: 2 members per team.",
+      "Projects must address significant educational issues using data science and AI."
+    ],
+    registration: {
+      fee: [{ type: "Team (2 Members)", cost: "1,000 BDT" }],
+      steps: [
+        "Online Registration and Abstract Submission: Register by [Date]",
+        "Preliminary Project Submission: Submit report and prototype by [Deadline]",
+        "Final Presentation: In-person presentation at the summit."
+      ],
+      benefits: "All participants receive an event T-shirt and souvenir."
+    },
+    evaluationCriteria: [
+      { criterion: "Relevance", weight: "20%" },
+      { criterion: "Innovation", weight: "20%" },
+      { criterion: "Methodology", weight: "20%" },
+      { criterion: "Impact", weight: "20%" },
+      { criterion: "Scalability and Feasibility", weight: "20%" }
+    ],
+    prizes: [
+      { position: "1st Place", amount: "5,000 BDT" },
+      { position: "2nd Place", amount: "3,000 BDT" },
+      { position: "3rd Place", amount: "2,000 BDT" }
+    ],
+    totalPrizePool: "10,000 BDT"
+  }
+];
+
+
