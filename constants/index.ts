@@ -199,31 +199,85 @@ export const formLinks = [
   {
     title: "Data Hackathon",
     link: "https://forms.gle/eYQLEmVesAPe2cAr9",
-    image: '/banners/Data Hackathon.png'
+    image: "/banners/Data Hackathon.png",
   },
   {
     title: "Project Competition",
     link: "https://forms.gle/qMPo8jeAb8vbNShD9",
-    image: '/banners/project competition.png'
+    image: "/banners/project competition.png",
   },
   {
     title: "Idea Poster Presentation",
     link: "https://forms.gle/sJSJJQnmZJS7EYVo7",
-    image: '/banners/Idea Poster.png'
+    image: "/banners/Idea Poster.png",
   },
   {
     title: "Promptcraft Challenge",
     link: "https://forms.gle/ppXCMi5xxikqL8zD9",
-    image: '/banners/Prompt craft.png'
+    image: "/banners/Prompt craft.png",
   },
   {
     title: "Hands-On Workshop",
     link: "https://forms.gle/q1G9g63CQpS3D2zJ8",
-    image: '/banners/handson Workshop.png'
+    image: "/banners/handson Workshop.png",
   },
 ];
 
 export const summitEventsData = [
+  {
+    title: "Data Hackathon",
+    description:
+      "Develop innovative AI-driven solutions for real-world educational challenges at the 4th Data Science Summit 2024.",
+    goals: [
+      "Promote innovation in AI for Education.",
+      "Foster collaboration and critical thinking.",
+      "Advance practical AI skills.",
+      "Create impactful solutions for education.",
+    ],
+    eligibility: [
+      "Open to university, college, and school students with a valid student ID.",
+      "Teams of up to 3 members.",
+      "Solutions must address an educational challenge with the potential for positive impact.",
+    ],
+    registration: {
+      fee: [{ type: "Team (up to 3 members)", cost: "1,000 BDT" }],
+      steps: [
+        "Online Registration: Register on the official summit portal.",
+        "Confirmation: Team leaders receive a confirmation email with event details.",
+      ],
+      benefits:
+        "Each participant receives a T-shirt, souvenirs, and certificates.",
+    },
+    competitionFormat: [
+      "Hackathon Challenge: Participants will receive a real-world educational dataset.",
+      "Objective: Apply ML techniques to solve educational challenges (e.g., personalized learning, student engagement, accessibility).",
+      "Timeframe: The Data Hackathon will take place from 3:30 PM - 4:30 PM on December 7, 2024.",
+      "Team Composition: Teams may have up to 3 members, with one designated team leader.",
+    ],
+    evaluationCriteria: [
+      { criterion: "Relevance to Theme", weight: "20%" },
+      { criterion: "Innovation", weight: "25%" },
+      { criterion: "Feasibility", weight: "20%" },
+      { criterion: "Technical Execution", weight: "25%" },
+      { criterion: "Presentation", weight: "10%" },
+    ],
+    prizes: [
+      { position: "1st Place", amount: "10,000 BDT" },
+      { position: "2nd Place", amount: "6,000 BDT" },
+      { position: "3rd Place", amount: "4,000 BDT" },
+    ],
+    totalPrizePool: "20,000 BDT",
+    codeOfConduct: [
+      "Submit Original Work: All work must be created during the hackathon.",
+      "Respectful Collaboration: Engage professionally and respect feedback from peers and judges.",
+      "Adhere to Event Guidelines: Follow all instructions, deadlines, and competition rules.",
+    ],
+    supportAndResources: [
+      "Pre-Event Workshop: Workshops on ML and AI applications in education will be provided.",
+      "Mentorship: Registered teams can request mentorship from AI and data science experts.",
+      "Data Access: The summit will provide educational datasets, or participants may bring relevant data.",
+    ],
+  },
   {
     title: "Poster Presentation",
     description:
