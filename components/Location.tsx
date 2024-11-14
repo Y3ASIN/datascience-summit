@@ -34,8 +34,8 @@ const Location: React.FC = () => {
           </div>
 
           <div className="py-2">
-            <p className="text-[19px] sm:text-xl">December 07, 2024 </p>
-            <p className="text-[18px] sm:text-xl" >Saturday 9AM - 5PM</p>
+            <p className="text-[19px] sm:text-xl">December 11, 2024 </p>
+            <p className="text-[18px] sm:text-xl" >Wednesday 9AM - 5PM</p>
           </div>
         </div>
 

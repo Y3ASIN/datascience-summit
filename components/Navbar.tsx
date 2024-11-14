@@ -52,20 +52,20 @@ const Navbar = () => {
 
   return (
     <nav className="sticky top-0 z-50 w-full bg-white py-2 shadow-md">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="flex items-center justify-between">
+          <div className="flex-shrink-0">
+            <Link href="/">
+              <Image
+                className="h-16 w-auto"
+                src="/logo.svg"
+                alt="Logo"
+                width={32}
+                height={50}
+              />
+            </Link>
+          </div>
           <div className="flex items-center">
-            <div className="flex-shrink-0">
-              <Link href="/">
-                <Image
-                  className="h-16 w-auto"
-                  src="/logo.svg"
-                  alt="Logo"
-                  width={32}
-                  height={50}
-                />
-              </Link>
-            </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
                 {navLinks.map((link, index) => (
