@@ -33,6 +33,7 @@ export interface EventFeaturing {
 export interface formLink {
   title: string;
   link: string;
+  image: string;
 }
 
 type Fee = {
@@ -45,14 +46,29 @@ type Prize = {
   amount: string;
 };
 
-export interface Section  {
+type Registration = {
+  fee: Fee[];
+  steps: string[];
+  benefits: string;
+};
+
+type EvaluationCriterion = {
+  criterion: string;
+  weight: string;
+};
+
+export interface Section {
   title: string;
   description: string;
+  eligibility: string[];
+  goals: string[];
   points?: string[];
   details?: string[];
+  registration?: Registration;
   fee?: Fee[];
   steps?: string[];
   benefits?: string;
   prizes?: Prize[];
   totalPrizePool?: string;
-};
+  evaluationCriteria?: EvaluationCriterion[];
+}

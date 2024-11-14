@@ -30,6 +30,70 @@ const EventDetails: React.FC<SummitProps> = ({ sections }) => {
             </ul>
           )}
 
+          {section.goals && (
+            <div className="mb-4">
+              <h3 className="font-semibold">Goals:</h3>
+              <ul className="list-inside list-disc space-y-1">
+                {section.goals.map((goal, idx) => (
+                  <li key={idx}>{goal}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {section.eligibility && (
+            <div className="mb-4">
+              <h3 className="font-semibold">Eligibility:</h3>
+              <ul className="list-inside list-disc space-y-1">
+                {section.eligibility.map((criterion, idx) => (
+                  <li key={idx}>{criterion}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {section.registration && (
+            <div className="mb-4">
+              <h3 className="font-semibold">Registration:</h3>
+              <div className="mb-2">
+                <h4 className="font-semibold">Fee:</h4>
+                <ul className="list-inside list-disc space-y-1">
+                  {section.registration.fee.map((feeItem, idx) => (
+                    <li key={idx}>
+                      <span>{feeItem.type}:</span> <span>{feeItem.cost}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="mb-2">
+                <h4 className="font-semibold">Steps:</h4>
+                <ul className="list-inside list-disc space-y-1">
+                  {section.registration.steps.map((step, idx) => (
+                    <li key={idx}>{step}</li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-semibold">Benefits:</h4>
+                <p>{section.registration.benefits}</p>
+              </div>
+            </div>
+          )}
+
+          {section.evaluationCriteria && (
+            <div className="mb-4">
+              <h3 className="font-semibold">Evaluation Criteria:</h3>
+              <ul className="list-inside list-disc space-y-1">
+                {section.evaluationCriteria.map((criterion, idx) => (
+                  <li key={idx}>
+                    <span>{criterion.criterion}:</span>{" "}
+                    <span>{criterion.weight}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
           {section.fee && (
             <div className="mb-4">
               <h3 className="font-semibold">Fee:</h3>
@@ -82,53 +146,3 @@ const EventDetails: React.FC<SummitProps> = ({ sections }) => {
 };
 
 export default EventDetails;
-
-// Example Usage with Multiple Sections
-// const sectionsData: Section[] = [
-//   {
-//     title: "Eligibility",
-//     description: "Open to University, College, and School students.",
-//     details: [
-//       "Individual or team participation (max 2 members per team).",
-//       "Posters must focus on AI in Education, covering topics like AI-enhanced learning, accessibility, and student engagement.",
-//     ],
-//   },
-//   {
-//     title: "Goals",
-//     description: "Encouraging exploration of AI's role in education.",
-//     points: [
-//       "Promote innovative thinking in AI applications for real-world educational challenges.",
-//       "Foster research and analytical skills in practical and ethical AI uses.",
-//       "Enhance communication skills for presenting complex AI concepts.",
-//       "Highlight the positive societal impact of AI in education.",
-//     ],
-//   },
-//   {
-//     title: "Registration",
-//     description: "Details on how to register and participate.",
-//     fee: [
-//       { type: "Individual", cost: "500 BDT" },
-//       { type: "Team (2 Members)", cost: "1,000 BDT" },
-//     ],
-//     steps: [
-//       "Online Registration: Register here. Deadline: [Date]",
-//       "Topic & Abstract Submission: Submit by [Date]",
-//       "Poster Submission: Digital posters (PDF format) by [Deadline]",
-//     ],
-//     benefits:
-//       "All participants receive a T-shirt, souvenirs, and certificates.",
-//   },
-//   {
-//     title: "Awards",
-//     description: "Prizes for top 3 posters based on judging criteria.",
-//     prizes: [
-//       { position: "1st Place", amount: "3,000 BDT" },
-//       { position: "2nd Place", amount: "2,000 BDT" },
-//       { position: "3rd Place", amount: "1,000 BDT" },
-//     ],
-//     totalPrizePool: "6,000 BDT",
-//   },
-// ];
-
-// Rendering the component with multiple sections
-{/* <DataScienceSummit sections={sectionsData} />; */}
