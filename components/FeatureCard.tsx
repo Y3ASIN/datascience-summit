@@ -14,7 +14,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ feature }) => {
 
   return (
     <section
-      className="flex min-h-[480px] w-full flex-col rounded-lg p-4 text-white shadow-lg transition-transform duration-300 hover:scale-105 sm:w-[380px] sm:max-w-7xl sm:p-6"
+      className="flex min-h-[480px] w-full flex-col rounded-lg p-4 font-poppins text-white shadow-lg transition-transform duration-300 hover:scale-105 sm:w-[380px] sm:max-w-7xl sm:p-6"
       style={{
         background: `linear-gradient(135deg, ${gradientFrom}, ${gradientTo})`,
       }}
@@ -32,8 +32,8 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ feature }) => {
       <h2 className="mb-2 text-lg font-semibold sm:text-xl">{title}</h2>
       <p className="mb-3 text-sm text-gray-100 sm:text-base">{description}</p>
 
-      <div className="mb-3 flex flex-wrap items-center space-y-1 text-xs text-gray-300 sm:flex-row sm:space-x-4 sm:space-y-0 sm:text-sm">
-        <div className="flex items-center">
+      <div className="mb-3 flex flex-col items-start space-y-1 text-xs text-gray-300 sm:space-x-0 sm:space-y-0 sm:text-sm">
+        <div className="inline-flex">
           <svg
             className="mr-1 h-4 w-4 sm:h-5 sm:w-5"
             fill="currentColor"
@@ -43,7 +43,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ feature }) => {
           </svg>
           <span>{date}</span>
         </div>
-        <div className="flex items-center">
+        <div className="inline-flex">
           <svg
             className="mr-1 h-4 w-4 sm:h-5 sm:w-5"
             fill="currentColor"
