@@ -23,7 +23,7 @@ export default function Home() {
         <TitleBar title="Events" />
         <SmallDes />
 
-        <div className="flex flex-wrap justify-center gap-8 bg-background p-8">
+        <div className="mx-auto flex w-full flex-wrap items-center justify-center gap-8 bg-background p-8 sm:max-w-7xl">
           {featureData.map((feature, index) => (
             <FeatureCard feature={feature} key={index} />
           ))}

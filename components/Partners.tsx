@@ -7,16 +7,18 @@ const Partners: React.FC = () => {
       <Image
         src="/assets/DIU Logo.svg"
         alt="diu-logo"
-        className="w-56 sm:w-[300px]"
+        className="w-56 sm:w-[300px] h-auto"
         width={500}
         height={400}
+        quality={100}
       />
       <Image
         src="/assets/ds logo.png"
         alt="ds-logo"
-        className="w-56 sm:w-[300px]"
+        className="w-56 sm:w-[300px] h-auto"
         width={500}
         height={400}
+        quality={100}
       />
     </section>
   );
