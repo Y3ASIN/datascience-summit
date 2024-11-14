@@ -219,7 +219,7 @@ export const formLinks = [
   {
     title: "Hands-On Workshop",
     link: "https://forms.gle/q1G9g63CQpS3D2zJ8",
-    image: "/banners/handson Workshop.png",
+    image: "/banners/Handson Workshop.png",
   },
 ];
 
