@@ -1,5 +1,5 @@
 import FeatureCard from "@/components/FeatureCard";
-import GuestCard from "@/components/GuestCard";
+// import GuestCard from "@/components/GuestCard";
 import HeroSection from "@/components/Hero";
 import Location from "@/components/Location";
 import Organizers from "@/components/Organizers";
@@ -10,7 +10,8 @@ import SmallDes from "@/components/SmallDes";
 import SummitGallery from "@/components/SummitGallery";
 import TitleBar from "@/components/Titlebar";
 
-import { events, featureData, guests } from "@/constants";
+// later import "guests"
+import { events, featureData } from "@/constants";
 
 export default function Home() {
   return (
@@ -62,14 +63,16 @@ export default function Home() {
           novel viewpoints.
         </p>
 
-        <TitleBar title="Our Honorable Guests" subText="text-2xl" />
+        {/* Guest Lists */}
+        {/* <TitleBar title="Our Honorable Guests" subText="text-2xl" />
 
         <div className="flex flex-wrap justify-center gap-6 rounded-lg bg-gray-100 p-8 shadow-lg">
-          {/* Guest Lists */}
+
           {guests.map((guest, index) => (
             <GuestCard key={index} guest={guest} isFirst={index === 0} />
           ))}
-        </div>
+        </div> 
+        */}
 
         <div>
           <TitleBar
