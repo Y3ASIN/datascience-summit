@@ -209,6 +209,9 @@ export const formLinks = [
   {
     title: "Idea Poster Presentation",
     link: "https://forms.gle/sJSJJQnmZJS7EYVo7",
+    // instructions: [
+
+    // ],
     image: "/banners/Idea Poster.png",
   },
   {

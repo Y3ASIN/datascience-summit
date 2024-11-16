@@ -19,7 +19,7 @@ const Instruction: React.FC = () => {
         </div>
       </div>
 
-        <hr className="block sm:hidden rounded-lg my-2"/>
+      <hr className="my-2 block rounded-lg sm:hidden" />
 
       <div className="my-3 flex flex-col items-center justify-center">
         <div className="flex flex-col items-start">
@@ -27,23 +27,23 @@ const Instruction: React.FC = () => {
           <div>
             <ul className="list-disc text-xs sm:text-lg">
               <li>To register, go to the registration link.</li>
-              <li>Select appropriate event from the dropdown menu.</li>
-              <li>
+              <li>Select appropriate event from the menu.</li>
+              {/* <li>
                 Pay <span className="font-semibold">100</span> BDT for Technical
                 Session or <span className="font-semibold">500</span> BDT for
                 Idea Contest.
-              </li>
-              <li>
-                You can pay through Nagad, bKash, or Rocket to{" "}
-                <span className="font-semibold"> 01798356513</span>
-                (Personal).
-              </li>
+              </li> */}
+              <li>You can pay through Nagad, bKash, or Rocket</li>
               <li>
                 Complete the form and send us the{" "}
                 <span className="font-semibold"> transaction ID</span>.
               </li>
               <li>You will get a confirmation email shortly.</li>
-              <li>For any further query, please email arman.swe@diu.edu.bd</li>
+              <li>
+                For any further query, please email{" "}
+                <strong>arman.swe@diu.edu.bd</strong> or{" "}
+                <strong>dsclub@diu.edu.bd</strong>{" "}
+              </li>
             </ul>
           </div>
         </div>
