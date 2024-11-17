@@ -8,10 +8,10 @@ interface Links {
 }
 
 const RegisterButton: React.FC<Links> = ({ links }) => {
-  const { title, link, image } = links;
+  const { title, link, image, instructions } = links;
 
   return (
-    <section className="flex w-full flex-col items-center rounded-md bg-white px-4 py-3 font-poppins shadow-xl sm:h-[330px] sm:w-[350px]">
+    <section className="flex w-full max-w-prose flex-col items-center rounded-md bg-white px-4 py-3 font-poppins shadow-xl sm:h-[400px] sm:w-[380px]">
       <div className="w-full">
         <Image
           src={image}
@@ -20,8 +20,19 @@ const RegisterButton: React.FC<Links> = ({ links }) => {
           height={350}
           className="rounded-md"
         />
-        <h1 className="mt-2 text-center text-2xl font-semibold">{title}</h1>
+        <h1 className="mt-2 text-center text-xl font-semibold sm:text-2xl">
+          {title}
+        </h1>
         <div className="my-2 w-full border" />
+
+        {instructions && (
+          <ul className="mt-4 list-inside list-disc text-pretty text-xs text-gray-700 sm:text-[15px] sm:leading-8">
+            {instructions.map((instruction, idx) => (
+              <li key={idx}>{instruction}</li>
+            ))}
+          </ul>
+        )}
+
         <a
           href={link}
           target="_blank"
