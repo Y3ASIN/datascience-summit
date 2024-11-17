@@ -199,29 +199,46 @@ export const formLinks = [
   {
     title: "Data Hackathon",
     link: "https://forms.gle/eYQLEmVesAPe2cAr9",
+    instructions: [
+      "Send money to 01799531233",
+      "Payment methods: Bkash or Nagad",
+    ],
     image: "/banners/Data Hackathon.png",
   },
   {
     title: "Project Competition",
     link: "https://forms.gle/qMPo8jeAb8vbNShD9",
+    instructions: [
+      "Send money to 01777002924",
+      "Payment methods: Bkash or Nagad",
+    ],
     image: "/banners/project competition.png",
   },
   {
     title: "Idea Poster Presentation",
     link: "https://forms.gle/sJSJJQnmZJS7EYVo7",
-    // instructions: [
-
-    // ],
+    instructions: [
+      "Send money to 01841268946",
+      "Payment methods: Bkash or Nagad",
+    ],
     image: "/banners/Idea Poster.png",
   },
   {
     title: "Promptcraft Challenge",
     link: "https://forms.gle/ppXCMi5xxikqL8zD9",
+    instructions: [
+      "Send money to 01929278283",
+      "Payment methods: Bkash or Nagad",
+    ],
     image: "/banners/Prompt craft.png",
   },
   {
     title: "Hands-On Workshop",
     link: "https://forms.gle/q1G9g63CQpS3D2zJ8",
+    instructions: [
+      "Send money to 017XXXXXX",
+      "Payment methods: Bkash or Nagad",
+    ],
     image: "/banners/Handson Workshop.png",
   },
 ];
@@ -245,8 +262,9 @@ export const summitEventsData = [
     registration: {
       fee: [{ type: "Team (up to 3 members)", cost: "1,000 BDT" }],
       steps: [
-        "Online Registration: Register on the official summit portal.",
-        "Confirmation: Team leaders receive a confirmation email with event details.",
+        "Step 1: Online Registration - Go to the 'Register Now' section.",
+        "Step 2: Payment - Send 1,000 BDT to 01799531233 via Bkash or Nagad.",
+        "Step 3: Confirmation - Team leaders receive a confirmation email with event details.",
       ],
       benefits:
         "Each participant receives a T-shirt, souvenirs, and certificates.",
@@ -254,7 +272,7 @@ export const summitEventsData = [
     competitionFormat: [
       "Hackathon Challenge: Participants will receive a real-world educational dataset.",
       "Objective: Apply ML techniques to solve educational challenges (e.g., personalized learning, student engagement, accessibility).",
-      "Timeframe: The Data Hackathon will take place from 3:30 PM - 4:30 PM on December 7, 2024.",
+      "Timeframe: The Data Hackathon will take place from 3:30 PM - 4:30 PM on December 11, 2024.",
       "Team Composition: Teams may have up to 3 members, with one designated team leader.",
     ],
     evaluationCriteria: [
@@ -282,7 +300,7 @@ export const summitEventsData = [
     ],
   },
   {
-    title: "Poster Presentation",
+    title: "Idea Poster Presentation",
     description:
       "Showcase innovative ideas on AI in Education at the 4th Data Science Summit 2024.",
     goals: [
@@ -302,9 +320,11 @@ export const summitEventsData = [
         { type: "Team (2 Members)", cost: "1,000 BDT" },
       ],
       steps: [
-        "Online Registration: Register here. Deadline: [Date]",
-        "Topic & Abstract Submission: Submit by [Date]",
-        "Poster Submission: Digital posters (PDF format) by [Deadline]",
+        "Step 1: Online Registration - Go to the 'Register Now' section.",
+        "Step 2: Payment - Send the respective amount (500 BDT for individuals or 1,000 BDT for teams) to 01841268946 via Bkash or Nagad.",
+        "Step 3: Confirmation - Submit the transaction ID on the portal for verification.",
+        // "Step 4: Topic & Abstract Submission - Submit.",
+        // "Step 5: Poster Submission - Upload digital posters (PDF format).",
       ],
       benefits:
         "All participants receive a T-shirt, souvenirs, and certificates.",
@@ -341,8 +361,10 @@ export const summitEventsData = [
     registration: {
       fee: [{ type: "Individual Participant", cost: "100 BDT" }],
       steps: [
-        "Online Registration: Register here. Deadline: [Date]",
-        "Prompt Challenge Event: 2:30 PM - 3:30 PM, December 11, 2024, at Daffodil Smart City.",
+        "Step 1: Online Registration - Go to the 'Register Now' section.",
+        "Step 2: Payment - Send 100 BDT to 01929278283 via Bkash or Nagad.",
+        "Step 3: Confirmation - Submit the transaction ID during registration confirmation on the portal.",
+        "Step 4: Attend the Prompt Challenge Event - 2:30 PM - 3:30 PM, December 11, 2024, at Daffodil Smart City.",
       ],
       benefits: "Each participant receives a certificate, T-shirt, and snacks.",
     },
@@ -378,9 +400,11 @@ export const summitEventsData = [
     registration: {
       fee: [{ type: "Team (2 Members)", cost: "1,000 BDT" }],
       steps: [
-        "Online Registration and Abstract Submission: Register by [Date]",
-        "Preliminary Project Submission: Submit report and prototype by [Deadline]",
-        "Final Presentation: In-person presentation at the summit.",
+        "Step 1: Online Registration and Abstract Submission - Go to the 'Register Now' section.",
+        "Step 2: Payment - Send 1,000 BDT to 01777002924 via Bkash or Nagad.",
+        "Step 3: Confirmation - Submit the transaction ID on the portal for verification.",
+        // "Step 4: Preliminary Project Submission - Submit report and prototype.",
+        "Step 4: Final Presentation - In-person presentation at the summit.",
       ],
       benefits: "All participants receive an event T-shirt and souvenir.",
     },

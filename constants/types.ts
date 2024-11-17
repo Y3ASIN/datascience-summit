@@ -34,6 +34,7 @@ export interface formLink {
   title: string;
   link: string;
   image: string;
+  instructions?: string[];
 }
 
 type Fee = {

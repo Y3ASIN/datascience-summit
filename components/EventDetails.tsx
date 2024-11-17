@@ -54,10 +54,12 @@ const EventDetails: React.FC<SummitProps> = ({ sections }) => {
 
           {section.registration && (
             <div className="mb-4">
-              <h3 className="font-semibold">Registration:</h3>
+              <h3 className="text-base font-semibold sm:text-xl">
+                Registration:
+              </h3>
               <div className="mb-2">
                 <h4 className="font-semibold">Fee:</h4>
-                <ul className="list-inside list-disc space-y-1">
+                <ul className="list-inside list-disc space-y-1 text-base sm:text-xl">
                   {section.registration.fee.map((feeItem, idx) => (
                     <li key={idx}>
                       <span>{feeItem.type}:</span> <span>{feeItem.cost}</span>
@@ -67,7 +69,7 @@ const EventDetails: React.FC<SummitProps> = ({ sections }) => {
               </div>
               <div className="mb-2">
                 <h4 className="font-semibold">Steps:</h4>
-                <ul className="list-inside list-disc space-y-1">
+                <ul className="list-inside list-disc space-y-1 text-base sm:text-xl">
                   {section.registration.steps.map((step, idx) => (
                     <li key={idx}>{step}</li>
                   ))}
