@@ -424,6 +424,13 @@ export const summitEventsData = [
   },
 ];
 
+export const organizers = [
+  { name: "diu logo", image: "/assets/DIU Logo.svg" },
+  { name: "swe logo", image: "/assets/swe logo.svg" },
+  // { name: "sec logo", image: "/assets/Sec logo.svg" },
+  { name: "ds lab logo", image: "/assets/ds logo.png" },
+];
+
 export const mediaPartners = [
   {
     name: "somokal",
