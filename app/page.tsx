@@ -2,6 +2,7 @@ import FeatureCard from "@/components/FeatureCard";
 // import GuestCard from "@/components/GuestCard";
 import HeroSection from "@/components/Hero";
 import Location from "@/components/Location";
+import MediaPartners from "@/components/MediaPartners";
 import Organizers from "@/components/Organizers";
 import Partners from "@/components/Partners";
 import Instruction from "@/components/RegistrationInstruction";
@@ -116,6 +117,10 @@ export default function Home() {
       <section className="group">
         <TitleBar title="Partner" subText="text-3xl" />
         <Partners />
+      </section>
+      <section className="group">
+        <TitleBar title="Media Partners" subText="text-3xl" />
+        <MediaPartners />
       </section>
     </section>
   );

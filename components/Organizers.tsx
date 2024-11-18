@@ -12,6 +12,13 @@ const Organizers: React.FC = () => {
         height={400}
       />
       <Image
+        src="/assets/Sec logo.svg"
+        alt="sec-logo"
+        className="w-64 sm:w-[400px]"
+        width={500}
+        height={400}
+      />
+      <Image
         src="/assets/ds logo.png"
         alt="ds-logo"
         className="w-64 sm:w-[400px]"
