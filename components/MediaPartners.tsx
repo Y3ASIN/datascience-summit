@@ -14,9 +14,9 @@ const MediaPartners: React.FC = () => {
           <Image
             src={mPartner.image}
             alt={mPartner.name}
-            className="h-auto w-56 rounded-md object-contain sm:w-[300px]"
-            width={500}
-            height={400}
+            className="h-52 w-56 rounded-md object-contain sm:w-[350px]"
+            width={350}
+            height={210}
             quality={100}
           />
         </div>
