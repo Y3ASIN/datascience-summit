@@ -118,6 +118,7 @@ export default function Home() {
         <TitleBar title="Partner" subText="text-3xl" />
         <Partners />
       </section>
+
       <section className="group">
         <TitleBar title="Media Partners" subText="text-3xl" />
         <MediaPartners />
