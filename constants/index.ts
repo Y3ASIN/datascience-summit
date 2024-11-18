@@ -423,3 +423,22 @@ export const summitEventsData = [
     totalPrizePool: "10,000 BDT",
   },
 ];
+
+export const mediaPartners = [
+  {
+    name: "somokal",
+    image: "/mediaPartners/daily-samakal.jpg",
+  },
+  {
+    name: "daily-star",
+    image: "/mediaPartners/daily-star.jpg",
+  },
+  {
+    name: "jai jai din",
+    image: "/mediaPartners/jai jai din.jpg",
+  },
+  {
+    name: "business standard",
+    image: "/mediaPartners/business standard.png",
+  },
+];
