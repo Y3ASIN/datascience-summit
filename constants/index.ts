@@ -201,7 +201,7 @@ export const formLinks = [
     link: "https://forms.gle/eYQLEmVesAPe2cAr9",
     instructions: [
       "Send money to 01799531233",
-      "Payment methods: Bkash or Nagad",
+      "Payment methods: Bkash or Rocket",
     ],
     image: "/banners/Data Hackathon.png",
   },
@@ -263,7 +263,7 @@ export const summitEventsData = [
       fee: [{ type: "Team (up to 3 members)", cost: "1,000 BDT" }],
       steps: [
         "Step 1: Online Registration - Go to the 'Register Now' section.",
-        "Step 2: Payment - Send 1,000 BDT to 01799531233 via Bkash or Nagad.",
+        "Step 2: Payment - Send 1,000 BDT to 01799531233 via Bkash or Rocket.",
         "Step 3: Confirmation - Team leaders receive a confirmation email with event details.",
       ],
       benefits:
