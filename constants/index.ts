@@ -127,7 +127,7 @@ export const summits: Summit[] = [
   {
     id: 2,
     title: "2nd Summit",
-    images: ["/2nd-summit/p1.svg", "/2nd-summit/p2.svg", "/2nd-summit/p3.svg"],
+    images: ["/2nd-summit/p1.jpg", "/2nd-summit/p2.jpg", "/2nd-summit/p3.png"],
   },
   {
     id: 3,
@@ -427,7 +427,7 @@ export const summitEventsData = [
 export const organizers = [
   { name: "diu logo", image: "/assets/DIU Logo.svg" },
   { name: "swe logo", image: "/assets/swe logo.svg" },
-  // { name: "sec logo", image: "/assets/Sec logo.svg" },
+  { name: "ds club logo", image: "/assets/DS Club.png" },
   { name: "ds lab logo", image: "/assets/ds logo.png" },
 ];
 
