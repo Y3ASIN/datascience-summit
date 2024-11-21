@@ -48,7 +48,7 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
   }, [targetDate]);
 
   return (
-    <section className="blue-gradient sm:spacey-0 flex flex-col items-center justify-center space-y-2 py-3 text-white sm:flex-row">
+    <section className="blue-gradient sm:spacey-0 flex flex-col items-center justify-center space-y-2 py-3 text-white shadow-xl sm:flex-row">
       <h1 className="mr-4 text-2xl font-bold">Opening In!</h1>
       <div className="flex items-center justify-center space-x-2 rounded-md bg-secondary p-2 text-black">
         <div className="text-center">

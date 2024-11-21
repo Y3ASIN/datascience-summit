@@ -1,5 +1,6 @@
 import FeatureCard from "@/components/FeatureCard";
-// import GuestCard from "@/components/GuestCard";
+
+import GuestList from "@/components/GuestList";
 import HeroSection from "@/components/Hero";
 import Location from "@/components/Location";
 import MediaPartners from "@/components/MediaPartners";
@@ -11,7 +12,6 @@ import SmallDes from "@/components/SmallDes";
 import SummitGallery from "@/components/SummitGallery";
 import TitleBar from "@/components/Titlebar";
 
-// later import "guests"
 import { events, featureData } from "@/constants";
 
 export default function Home() {
@@ -65,15 +65,11 @@ export default function Home() {
         </p>
 
         {/* Guest Lists */}
-        {/* <TitleBar title="Our Honorable Guests" subText="text-2xl" />
+        <TitleBar title="Our Honorable Guests" subText="text-2xl" />
 
-        <div className="flex flex-wrap justify-center gap-6 rounded-lg bg-gray-100 p-8 shadow-lg">
-
-          {guests.map((guest, index) => (
-            <GuestCard key={index} guest={guest} isFirst={index === 0} />
-          ))}
-        </div> 
-        */}
+        <div className="gap-6 rounded-lg bg-gray-100 p-8 shadow-lg">
+          <GuestList />
+        </div>
 
         <div>
           <TitleBar

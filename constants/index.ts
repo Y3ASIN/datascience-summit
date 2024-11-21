@@ -138,61 +138,54 @@ export const summits: Summit[] = [
 
 export const guests: Guest[] = [
   {
-    name: "Jhone Doe",
-
-    img: "/assets/sabur-khan.jpg",
-    designation: "Chairman",
-    organization: "DIU",
+    name: "Prof. M. Lutfar Rahman, PhD",
+    img: "/guests/vc.jpg",
+    designation: "Vice Chancellor",
+    organization: "Daffodil International University",
+    category: "chief",
   },
   {
-    name: "Jane Doe",
-
-    img: "/assets/jane-doe.jpg",
-    designation: "CEO of Tech Innovate",
-    organization: "Tech Innovate Inc.",
+    name: "Professor Dr. S.M. Mahbub Ul Haque Majumder",
+    img: "/guests/provc.jpg",
+    designation: "Pro Vice Chancellor",
+    organization: "Daffodil International University",
+    category: "special",
   },
   {
-    name: "John Smith",
-
-    img: "/assets/john-smith.jpg",
-    designation: "Head of Research",
-    organization: "Global AI Labs",
+    name: "Professor Dr. Syed Akhter Hossain",
+    img: "/guests/dean.jpg",
+    designation: "Dean and Professor of FSIT",
+    organization: "Daffodil International University",
+    category: "special",
   },
   {
-    name: "Emily Carter",
-
-    img: "/assets/emily-carter.jpg",
-    designation: "Lead Data Scientist",
-    organization: "Quantum Solutions",
+    name: "Dr. Imran Mahmud",
+    img: "/guests/dept head.jpeg",
+    designation: "Head of Software Engineering Department",
+    organization: "Daffodil International University",
+    category: "special",
   },
   {
-    name: "Michael Lee",
-
-    img: "/assets/michael-lee.jpg",
-    designation: "CTO",
-    organization: "Future Vision Technologies",
+    name: "Nikhil Patel",
+    img: "/guests/Nikhil Patel.jpg",
+    designation: "Senior SAP Consultant ",
+    organization: "Deloitte Consulting LLP, Houston, Texas",
+    category: "special",
   },
-  {
-    name: "Sophia Kim",
-
-    img: "/assets/sophia-kim.jpg",
-    designation: "Professor",
-    organization: "University of Innovation",
-  },
-  {
-    name: "Carlos Rivera",
-
-    img: "/assets/carlos-rivera.jpg",
-    designation: "Founder",
-    organization: "Green Tech Enterprises",
-  },
-  {
-    name: "Anna Johnson",
-
-    img: "/assets/anna-johnson.jpg",
-    designation: "Chief Product Officer",
-    organization: "NextGen Robotics",
-  },
+  // {
+  //   name: "Sophia Kim",
+  //   img: "/assets/sophia-kim.jpg",
+  //   designation: "Professor",
+  //   organization: "University of Innovation",
+  //   category: "guest",
+  // },
+  // {
+  //   name: "Carlos Rivera",
+  //   img: "/assets/carlos-rivera.jpg",
+  //   designation: "Founder",
+  //   organization: "Green Tech Enterprises",
+  //   category: "guest",
+  // },
 ];
 
 export const formLinks = [
@@ -260,10 +253,10 @@ export const summitEventsData = [
       "Solutions must address an educational challenge with the potential for positive impact.",
     ],
     registration: {
-      fee: [{ type: "Team (up to 3 members)", cost: "1,000 BDT" }],
+      fee: [{ type: "Team (up to 3 members)", cost: "1,500 BDT" }],
       steps: [
         "Step 1: Online Registration - Go to the 'Register Now' section.",
-        "Step 2: Payment - Send 1,000 BDT to 01799531233 via Bkash or Rocket.",
+        "Step 2: Payment - Send 1,500 BDT to 01799531233 via Bkash or Rocket.",
         "Step 3: Confirmation - Team leaders receive a confirmation email with event details.",
       ],
       benefits:
