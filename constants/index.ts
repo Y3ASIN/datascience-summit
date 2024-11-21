@@ -255,7 +255,7 @@ export const summitEventsData = [
     registration: {
       fee: [{ type: "Team (up to 3 members)", cost: "1,500 BDT" }],
       steps: [
-        "Step 1: Online Registration - Go to the 'Register Now' section.",
+        "Step 1: Online Registration - Go to the 'Register Now' section. Registration Deadline - 31 November.",
         "Step 2: Payment - Send 1,500 BDT to 01799531233 via Bkash or Rocket.",
         "Step 3: Confirmation - Team leaders receive a confirmation email with event details.",
       ],
@@ -313,9 +313,9 @@ export const summitEventsData = [
         { type: "Team (2 Members)", cost: "1,000 BDT" },
       ],
       steps: [
-        "Step 1: Online Registration - Go to the 'Register Now' section.",
+        "Step 1: Online Registration - Go to the 'Register Now' section. Registration Deadline - 31 November.",
         "Step 2: Payment - Send the respective amount (500 BDT for individuals or 1,000 BDT for teams) to 01841268946 via Bkash or Nagad.",
-        "Step 3: Confirmation - Submit the transaction ID on the portal for verification.",
+        "Step 3: Confirmation - Submit the transaction ID on the portal for verification. ",
         // "Step 4: Topic & Abstract Submission - Submit.",
         // "Step 5: Poster Submission - Upload digital posters (PDF format).",
       ],
@@ -354,7 +354,7 @@ export const summitEventsData = [
     registration: {
       fee: [{ type: "Individual Participant", cost: "100 BDT" }],
       steps: [
-        "Step 1: Online Registration - Go to the 'Register Now' section.",
+        "Step 1: Online Registration - Go to the 'Register Now' section. Registration Deadline - 31 November.",
         "Step 2: Payment - Send 100 BDT to 01929278283 via Bkash or Nagad.",
         "Step 3: Confirmation - Submit the transaction ID during registration confirmation on the portal.",
         "Step 4: Attend the Prompt Challenge Event - 2:30 PM - 3:30 PM, December 11, 2024, at Daffodil Smart City.",
@@ -393,7 +393,7 @@ export const summitEventsData = [
     registration: {
       fee: [{ type: "Team (2 Members)", cost: "1,000 BDT" }],
       steps: [
-        "Step 1: Online Registration and Abstract Submission - Go to the 'Register Now' section.",
+        "Step 1: Online Registration and Abstract Submission - Go to the 'Register Now' section. Registration Deadline - 31 November.",
         "Step 2: Payment - Send 1,000 BDT to 01777002924 via Bkash or Nagad.",
         "Step 3: Confirmation - Submit the transaction ID on the portal for verification.",
         // "Step 4: Preliminary Project Submission - Submit report and prototype.",
