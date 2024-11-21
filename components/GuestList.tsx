@@ -10,7 +10,7 @@ const GuestList: React.FC = () => {
 
   return (
     <div className="container mx-auto flex flex-col items-center justify-center p-4">
-      <h2 className="mb-4 text-2xl font-bold">Chief Guests</h2>
+      <h2 className="mb-4 text-2xl font-bold">Chief Guest</h2>
       <div className="flex flex-wrap gap-4">
         {chiefGuests.map((guest) => (
           <GuestCard key={guest.name} guest={guest} />
