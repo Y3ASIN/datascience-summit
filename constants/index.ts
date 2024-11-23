@@ -417,10 +417,17 @@ export const summitEventsData = [
   },
 ];
 
-export const organizers = [
+export const partners = [
   { name: "diu logo", image: "/assets/DIU Logo.svg" },
-  { name: "swe logo", image: "/assets/swe logo.svg" },
   { name: "ds club logo", image: "/assets/DS Club.png" },
+  { name: "cpc", image: "/assets/cpc.jpg" },
+  { name: "cis", image: "/assets/cis.jpg" },
+  { name: "itm", image: "/assets/itm.jpg" },
+  { name: "creative", image: "/assets/creative.jpg" },
+];
+
+export const organizers = [
+  { name: "swe logo", image: "/assets/swe logo.svg" },
   { name: "ds lab logo", image: "/assets/ds logo.png" },
 ];
 
