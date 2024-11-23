@@ -1,5 +1,4 @@
 import FeatureCard from "@/components/FeatureCard";
-
 import GuestList from "@/components/GuestList";
 import HeroSection from "@/components/Hero";
 import Location from "@/components/Location";
