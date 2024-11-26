@@ -352,10 +352,10 @@ export const summitEventsData = [
       "Each participant may submit only one prompt.",
     ],
     registration: {
-      fee: [{ type: "Individual Participant", cost: "100 BDT" }],
+      fee: [{ type: "Individual Participant", cost: "200 BDT" }],
       steps: [
         "Step 1: Online Registration - Go to the 'Register Now' section. Registration Deadline - 31 November.",
-        "Step 2: Payment - Send 100 BDT to 01929278283 via Bkash or Nagad.",
+        "Step 2: Payment - Send 200 BDT to 01929278283 via Bkash or Nagad.",
         "Step 3: Confirmation - Submit the transaction ID during registration confirmation on the portal.",
         "Step 4: Attend the Prompt Challenge Event - 2:30 PM - 3:30 PM, December 11, 2024, at Daffodil Smart City.",
       ],
