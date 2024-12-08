@@ -18,7 +18,7 @@ export interface Guest {
   img: string;
   designation: string;
   organization: string;
-  category: "chief" | "special" | "guest";
+  category: "chairman" | "chief" | "special" | "guest";
 }
 
 export interface EventFeaturing {

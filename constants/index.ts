@@ -138,6 +138,13 @@ export const summits: Summit[] = [
 
 export const guests: Guest[] = [
   {
+    name: "Dr. Md. Sabur Khan",
+    img: "/guests/Sabur Khan.jpg",
+    designation: "Honorable Chairman Board of Trustees",
+    organization: "Daffodil International University",
+    category: "chairman",
+  },
+  {
     name: "Prof. M. Lutfar Rahman, PhD",
     img: "/guests/vc.jpg",
     designation: "Vice Chancellor",
