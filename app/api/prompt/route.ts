@@ -1,110 +1,48 @@
-import { NextRequest, NextResponse } from 'next/server';
-import { connectToDatabase } from '../../../lib/mongodb';
-import PromptCraft, { IPromptCraft } from '../../../models/PromptCraft';
+import { NextResponse } from 'next/server';
+import { NextApiResponse } from 'next';
+import { File } from 'buffer';
+import { connectToDatabase } from '@/lib/mongodb';
+import PromptCraft from '@/models/PromptCraft';
 import axios from 'axios';
 
-// Disable automatic body parsing
 export const config = {
     api: {
-        bodyParser: false,
+        bodyParser: false, // Disable Next.js' automatic body parsing
     },
 };
 
-// Helper to convert ReadableStream to Buffer
-async function streamToBuffer(stream: ReadableStream<Uint8Array> | null): Promise<Buffer> {
-    if (!stream) {
-        throw new Error('ReadableStream is null');
-    }
-
-    const chunks: Uint8Array[] = [];
-    const reader = stream.getReader();
-    let done = false;
-
-    while (!done) {
-        const { value, done: streamDone } = await reader.read();
-        if (value) chunks.push(value);
-        done = streamDone;
-    }
-
-    return Buffer.concat(chunks);
-}
-
-// Helper to parse multipart form-data manually
-async function parseMultipartForm(request: NextRequest): Promise<{
-    fields: Record<string, string>;
-    fileBuffer: Buffer;
-}> {
-    const contentType = request.headers.get('content-type') || '';
-    const boundary = contentType.split('boundary=')[1];
-
-    if (!boundary) {
-        throw new Error('Missing boundary in content-type');
-    }
-
-    const body = await streamToBuffer(request.body);
-    const parts = body.toString().split(`--${boundary}`);
-    const fields: Record<string, string> = {};
-    let fileBuffer: Buffer | null = null;
-
-    for (const part of parts) {
-        const [headers, ...rest] = part.split('\r\n\r\n');
-        if (!headers) continue;
-
-        const dispositionMatch = headers.match(/name="([^"]+)"/);
-        const filenameMatch = headers.match(/filename="([^"]+)"/);
-
-        const bodyContent = rest.join('\r\n\r\n').trim();
-        if (filenameMatch) {
-            // File part
-            fileBuffer = Buffer.from(bodyContent, 'binary');
-        } else if (dispositionMatch) {
-            // Field part
-            const name = dispositionMatch[1];
-            fields[name] = bodyContent;
-        }
-    }
-
-    if (!fileBuffer) {
-        throw new Error('No file found in the form data');
-    }
-
-    return { fields, fileBuffer };
-}
-
-export const POST = async (req: NextRequest) => {
+export const POST = async (req: Request, res: NextApiResponse) => {
     try {
         console.log('Incoming request to /api/prompt');
-        console.log('ImgBB API Key:', process.env.IMGBB_API_KEY);
 
-        // Parse multipart form-data
-        const { fields, fileBuffer } = await parseMultipartForm(req);
-        const { name, email, prompt } = fields;
+        const formData = await req.formData();
 
-        if (!name || !email || !prompt) {
-            console.log('Validation failed: Missing required fields');
+        const file = formData.get('image') as unknown as File;
+
+        const { name, email, prompt } = Object.fromEntries(formData);
+
+        if (!name || !email || !prompt || !file) {
             return NextResponse.json(
                 { error: 'Missing required fields: name, email, or prompt' },
                 { status: 400 }
             );
         }
 
+        const fileBuffer = await file.arrayBuffer();
+        const fileString = Buffer.from(fileBuffer).toString('base64');
+
         console.log('Uploading file to ImgBB...');
 
-        // Upload the fileBuffer to ImgBB
+        // Upload the file to ImgBB
         const imgBBApiKey = process.env.IMGBB_API_KEY;
         if (!imgBBApiKey) {
-            console.error('ImgBB API Key is missing');
-            return NextResponse.json(
-                { error: 'ImgBB API Key is not configured' },
-                { status: 500 }
-            );
+            throw new Error('ImgBB API Key is not configured');
         }
-
 
         const imgbbResponse = await axios.post(
             `https://api.imgbb.com/1/upload?key=${imgBBApiKey}`,
             new URLSearchParams({
-                image: fileBuffer.toString('base64'),
+                image: fileString,
             })
         );
 
@@ -123,7 +61,7 @@ export const POST = async (req: NextRequest) => {
 
         // Save the data to MongoDB
         await connectToDatabase();
-        const newPromptCraft: IPromptCraft = new PromptCraft({
+        const newPromptCraft = new PromptCraft({
             name,
             email,
             prompt,
@@ -137,8 +75,8 @@ export const POST = async (req: NextRequest) => {
             message: 'Submission successful!',
             data: newPromptCraft,
         });
-    } catch (error) {
-        console.error('Error occurred during POST request:', error);
+    } catch (error: any) {
+        console.error('Error occurred during POST request:', error.message);
         return NextResponse.json(
             { error: 'An error occurred while processing your request' },
             { status: 500 }
