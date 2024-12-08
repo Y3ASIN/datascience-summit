@@ -14,6 +14,8 @@ const Navbar = () => {
   const router = useRouter();
   const pathname = usePathname();
 
+  const isActive = (href: string) => pathname === href;
+
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -72,7 +74,7 @@ const Navbar = () => {
                   <button
                     key={index}
                     onClick={() => handleLinkClick(link)}
-                    className="rounded-md border-b-2 border-transparent px-3 py-2 text-lg font-medium text-gray-800 hover:border-blue-600 hover:text-blue-600"
+                    className={`rounded-md border-b-2 border-transparent px-3 py-2 text-lg font-medium text-gray-800 ${isActive(`${link}`) ? "border-blue-600" : ""} hover:border-blue-600 hover:text-blue-600`}
                   >
                     {link.charAt(0).toUpperCase() +
                       link.slice(1).replace("-", " ")}
@@ -81,9 +83,15 @@ const Navbar = () => {
 
                 <Link
                   href="/about"
-                  className="rounded-md border-b-2 border-transparent px-3 py-2 text-lg font-medium text-gray-800 hover:border-blue-600 hover:text-blue-600"
+                  className={`text-gray-80 rounded-md border-b-2 border-transparent px-3 py-2 text-lg font-medium ${isActive("/about") ? "border-blue-600" : ""} hover:border-blue-600 hover:text-blue-600`}
                 >
                   Event Details
+                </Link>
+                <Link
+                  href="/submit"
+                  className={`text-gray-80 rounded-md border-b-2 border-transparent px-3 py-2 text-lg font-medium ${isActive("/submit") ? "border-blue-600" : ""} hover:border-blue-600 hover:text-blue-600`}
+                >
+                  Submit
                 </Link>
               </div>
             </div>
