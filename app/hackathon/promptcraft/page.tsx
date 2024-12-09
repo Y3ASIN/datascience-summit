@@ -1,5 +1,7 @@
 'use client';
 import React, { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 
 export default function PromptCraftPage() {
     const [formData, setFormData] = useState({
@@ -58,6 +60,9 @@ export default function PromptCraftPage() {
                     image: null,
                     imagePreview: '',
                 });
+                toast.success("Successfully Submitted!", {
+                    position: "top-right"
+                });
             } else {
                 setSubmissionStatus('Form submission failed. Please try again.');
             }
@@ -68,16 +73,10 @@ export default function PromptCraftPage() {
 
     return (
         <>
-            {submissionStatus && (
-                <div className="mt-10 text-center text-lg text-green-700">
-                    Submitted
-                    {submissionStatus}
-                </div>
-            )}
+            <ToastContainer />
+
             <div className="min-h-screen flex items-center justify-center bg-gray-50 py-6 px-4 sm:px-6 lg:px-8">
-
                 <div className="max-w-4xl w-full bg-white rounded-lg shadow-md overflow-hidden grid grid-cols-1 md:grid-cols-2">
-
                     {/* Left Side: Image Upload and Preview */}
                     <div className="flex flex-col items-center justify-center bg-gray-100 p-6">
                         <div className="mb-4">
@@ -158,7 +157,11 @@ export default function PromptCraftPage() {
                                 Submit
                             </button>
                         </form>
-
+                        {submissionStatus && (
+                            <div className="mt-4 text-center text-sm text-gray-600">
+                                {submissionStatus}
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>

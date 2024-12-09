@@ -8,7 +8,7 @@ const Submit = () => {
     <div className="py-8 bg-gray-100">
       <h1 className="text-3xl font-bold text-center text-gray-800 mb-8">Submit</h1>
       <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
-        <a href="/submit/promptcraft" className="max-w-sm rounded overflow-hidden shadow-lg bg-white transform hover:scale-105 transition-transform duration-300">
+        <a href="/hackathon/promptcraft" className="max-w-sm rounded overflow-hidden shadow-lg bg-white transform hover:scale-105 transition-transform duration-300">
           <div className="relative w-full h-48">
             <Image className="object-cover" src={promptIMG} alt="PromptCraft Image" layout="fill" />
           </div>
