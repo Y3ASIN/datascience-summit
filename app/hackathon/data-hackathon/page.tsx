@@ -100,7 +100,7 @@ export default function DataHackathon() {
             });
 
             if (response.ok) {
-                toast.success('Submission successful!');
+                toast.success(`Submission successful! Your F1Score for the given dataset: ${f1Score}`);
                 setFormData({ name: '', email: '' });
                 setUserData(null);
             } else {

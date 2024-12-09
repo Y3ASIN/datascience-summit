@@ -18,7 +18,7 @@ const Submit = () => {
           </div>
         </a>
 
-        <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white transform hover:scale-105 transition-transform duration-300">
+        <a href="/hackathon/data-hackathon" className="max-w-sm rounded overflow-hidden shadow-lg bg-white transform hover:scale-105 transition-transform duration-300">
           <div className="relative w-full h-48">
             <Image className="object-cover" src={datathonIMG} alt="Data Hackathon Image" layout="fill" />
           </div>
@@ -26,7 +26,7 @@ const Submit = () => {
             <div className="font-bold text-xl mb-2 text-center">Data Hackathon</div>
             <p className="text-gray-600 text-center">Compete in solving real-world data challenges with innovative solutions.</p>
           </div>
-        </div>
+        </a>
       </div>
     </div >
   );
