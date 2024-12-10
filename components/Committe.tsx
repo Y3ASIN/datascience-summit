@@ -49,6 +49,7 @@ const Committee = () => {
                             </h3>
                             <p className="text-sm text-gray-600">{member.title}</p>
                             <p className="text-sm text-gray-500">{member.organization}</p>
+                            <p className="text-sm text-gray-800">{member.designation}, Data Science Club DIU</p>
                         </div>
                     ))}
                 </div>

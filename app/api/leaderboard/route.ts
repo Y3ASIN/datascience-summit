@@ -10,8 +10,6 @@ export const GET = async (req: Request) => {
         // Fetch leaderboard data (top 10 entries sorted by f1Score)
         const leaderboard = await DataHackathon.find()
             .sort({ f1Score: -1 }) // Descending order
-            .limit(10);
-
         // Respond with the leaderboard
         return NextResponse.json({ leaderboard }, { status: 200 });
     } catch (error: unknown) {
