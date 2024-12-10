@@ -18,6 +18,7 @@ declare global {
   }
 }
 
+// Use a type-safe global variable for Mongoose
 const globalForMongoose = global as typeof global & {
   mongoose?: {
     conn: Connection | null;
@@ -25,23 +26,25 @@ const globalForMongoose = global as typeof global & {
   };
 };
 
-// Ensure `mongoose` is always defined
+// Initialize global.mongoose if not already initialized
 if (!globalForMongoose.mongoose) {
   globalForMongoose.mongoose = { conn: null, promise: null };
 }
 
 export async function connectToDatabase(): Promise<Connection> {
-  // Safely access mongoose.conn
+  // If a connection already exists, return it
   if (globalForMongoose.mongoose!.conn) {
     return globalForMongoose.mongoose!.conn;
   }
 
-  // Safely initialize mongoose.promise
+  // Otherwise, create a new promise for the connection
   if (!globalForMongoose.mongoose!.promise) {
-    globalForMongoose.mongoose!.promise = mongoose.connect(MONGO_URI as string, {}).then((m) => m.connection);
+    globalForMongoose.mongoose!.promise = mongoose
+      .connect(MONGO_URI as string) // Options removed as they are now defaults
+      .then((m) => m.connection);
   }
 
-  // Assign the connection once the promise resolves
+  // Wait for the promise to resolve and store the connection
   globalForMongoose.mongoose!.conn = await globalForMongoose.mongoose!.promise;
   return globalForMongoose.mongoose!.conn;
 }
