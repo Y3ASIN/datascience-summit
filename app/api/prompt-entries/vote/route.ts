@@ -4,7 +4,8 @@ import PromptCraft from '@/models/PromptCraft';
 
 export const PUT = async (req: Request) => {
     try {
-        const { promptId } = await req.json();
+        const body = await req.json();
+        const { promptId } = body;
 
         if (!promptId) {
             return NextResponse.json(
@@ -13,8 +14,10 @@ export const PUT = async (req: Request) => {
             );
         }
 
-        // Connect to the database and update votes
+        // Connect to the database
         await connectToDatabase();
+
+        // Find the prompt by ID
         const prompt = await PromptCraft.findById(promptId);
 
         if (!prompt) {
@@ -24,17 +27,29 @@ export const PUT = async (req: Request) => {
             );
         }
 
-        prompt.votes += 1; // Increment vote count
+        // Increment the vote count
+        prompt.votes = (prompt.votes || 0) + 1; // Ensure votes is initialized to 0 if undefined
         await prompt.save();
 
-        return NextResponse.json({
-            message: 'Vote successfully updated',
-            votes: prompt.votes,
-        });
-    } catch (error: any) {
-        console.error('Error updating votes:', error.message);
         return NextResponse.json(
-            { error: 'An error occurred while updating votes' },
+            {
+                message: 'Vote successfully updated',
+                votes: prompt.votes,
+            },
+            { status: 200 }
+        );
+    } catch (error: unknown) {
+        if (error instanceof Error) {
+            console.error('Error updating votes:', error.message);
+            return NextResponse.json(
+                { error: 'An error occurred while updating votes' },
+                { status: 500 }
+            );
+        }
+
+        console.error('Unknown error:', error);
+        return NextResponse.json(
+            { error: 'An unexpected error occurred' },
             { status: 500 }
         );
     }

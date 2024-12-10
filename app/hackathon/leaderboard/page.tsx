@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import { FaCrown, FaEnvelope, FaTrophy } from 'react-icons/fa';
+import { FaCrown, FaTrophy } from 'react-icons/fa';
 
 interface LeaderboardEntry {
     name: string;

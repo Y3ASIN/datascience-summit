@@ -2,29 +2,39 @@ import { connectToDatabase } from '@/lib/mongodb';
 import PromptCraft from '@/models/PromptCraft';
 import { NextResponse } from 'next/server';
 
-export const GET = async (req: Request) => {
+export const GET = async () => {
     try {
+        // Connect to the database
         await connectToDatabase();
 
-        const entry = await PromptCraft.find();
+        // Fetch all entries from the PromptCraft collection
+        const entries = await PromptCraft.find();
 
-        if (!entry) {
+        if (!entries || entries.length === 0) {
             return NextResponse.json(
-                { error: 'Entry not found' },
+                { error: 'No entries found' },
                 { status: 404 }
             );
         }
 
-        console.log('Entry retrieved:', entry);
+        console.log('Entries retrieved:', entries);
 
         return NextResponse.json({
-            message: 'Fetched entry successfully!',
-            data: entry,
-        });
-    } catch (error: any) {
-        console.error('Error fetching entry:', error.message);
+            message: 'Fetched entries successfully!',
+            data: entries,
+        }, { status: 200 });
+    } catch (error: unknown) {
+        if (error instanceof Error) {
+            console.error('Error fetching entries:', error.message);
+            return NextResponse.json(
+                { error: 'An error occurred while fetching the entries' },
+                { status: 500 }
+            );
+        }
+
+        console.error('Unknown error:', error);
         return NextResponse.json(
-            { error: 'An error occurred while fetching the entry' },
+            { error: 'An unexpected error occurred' },
             { status: 500 }
         );
     }

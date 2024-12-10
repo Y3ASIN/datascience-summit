@@ -2,9 +2,16 @@ import { NextResponse } from 'next/server';
 import DataHackathon from '@/models/DataHackathon';
 import { connectToDatabase } from '@/lib/mongodb';
 
+interface RequestBody {
+    name: string;
+    email: string;
+    f1Score?: number; // Optional if `undefined` might be passed
+    f1score?: number; // Alternative for f1Score
+}
+
 export const POST = async (req: Request) => {
     try {
-        const body = await req.json();
+        const body: RequestBody = await req.json();
 
         // Normalize input field names
         const name = body.name;
@@ -34,6 +41,7 @@ export const POST = async (req: Request) => {
             { status: 201 }
         );
     } catch (error: unknown) {
+        // Check if error is an instance of Error
         if (error instanceof Error) {
             if (error.name === 'ValidationError') {
                 return NextResponse.json(

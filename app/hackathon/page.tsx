@@ -6,7 +6,7 @@ import datathonIMG from '@/public/datahackathon.jpg'
 const Submit = () => {
   return (
     <div className="py-8 bg-gray-100">
-      <h1 className="text-3xl font-bold text-center text-gray-800 mb-8">Hackathon</h1>
+      <h1 className="text-3xl font-bold text-center text-gray-800 mb-8">Competition</h1>
       <p className="text-lg text-gray-700 text-center max-w-3xl mx-auto">
         Join us for an exciting hackathon where creativity meets technology! Collaborate, innovate, and build solutions to real-world challenges while connecting with like-minded individuals. Are you ready to make an impact?
       </p>
