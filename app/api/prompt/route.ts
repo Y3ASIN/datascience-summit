@@ -1,6 +1,4 @@
 import { NextResponse } from 'next/server';
-import { NextApiResponse } from 'next';
-import { File } from 'buffer';
 import { connectToDatabase } from '@/lib/mongodb';
 import PromptCraft from '@/models/PromptCraft';
 import axios from 'axios';
@@ -11,23 +9,26 @@ export const config = {
     },
 };
 
-export const POST = async (req: Request, res: NextApiResponse) => {
+export const POST = async (req: Request) => {
     try {
         console.log('Incoming request to /api/prompt');
 
         const formData = await req.formData();
 
-        const file = formData.get('image') as unknown as File;
-
-        const { name, email, prompt } = Object.fromEntries(formData);
+        // Type assertions for form fields
+        const file = formData.get('image') as File;
+        const name = formData.get('name') as string;
+        const email = formData.get('email') as string;
+        const prompt = formData.get('prompt') as string;
 
         if (!name || !email || !prompt || !file) {
             return NextResponse.json(
-                { error: 'Missing required fields: name, email, or prompt' },
+                { error: 'Missing required fields: name, email, prompt, or image' },
                 { status: 400 }
             );
         }
 
+        // Convert file to base64
         const fileBuffer = await file.arrayBuffer();
         const fileString = Buffer.from(fileBuffer).toString('base64');
 
@@ -75,10 +76,18 @@ export const POST = async (req: Request, res: NextApiResponse) => {
             message: 'Submission successful!',
             data: newPromptCraft,
         });
-    } catch (error: any) {
-        console.error('Error occurred during POST request:', error.message);
+    } catch (error: unknown) {
+        if (error instanceof Error) {
+            console.error('Error occurred during POST request:', error.message);
+            return NextResponse.json(
+                { error: 'An error occurred while processing your request' },
+                { status: 500 }
+            );
+        }
+
+        console.error('Unknown error:', error);
         return NextResponse.json(
-            { error: 'An error occurred while processing your request' },
+            { error: 'An unexpected error occurred' },
             { status: 500 }
         );
     }

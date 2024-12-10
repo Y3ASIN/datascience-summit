@@ -156,7 +156,7 @@ export const guests: Guest[] = [
     img: "/guests/provc.jpg",
     designation: "Pro Vice Chancellor",
     organization: "Daffodil International University",
-    category: "special",
+    category: "chief",
   },
   {
     name: "Professor Dr. Syed Akhter Hossain",
@@ -173,12 +173,90 @@ export const guests: Guest[] = [
     category: "special",
   },
   {
+    name: "Dr. Mohammad NuruzZaman",
+    img: "/guests/ceosir.jpg",
+    designation: "Group CEO",
+    organization: "Daffodil Family",
+    category: "special",
+  },
+
+  {
+    name: "Mário Franco",
+    img: "/guests/mario.webp",
+    designation: "SFounder & Chairperson",
+    organization: " Millennium@EDU SUSTAINABLE EDUCATION",
+    category: "special",
+  },
+  {
     name: "Nikhil Patel",
     img: "/guests/Nikhil Patel.jpg",
     designation: "Senior SAP Consultant ",
     organization: "Deloitte Consulting LLP, Houston, Texas",
     category: "special",
   },
+  {
+    name: "Md. Abu Saleh Ovi",
+    img: "/guests/ovi.jpeg",
+    designation: "Principal Data Engineer",
+    organization: "NEXT Ventures",
+    category: "special",
+  },
+
+  {
+    name: "Prof. Dr. Mohammad Shamsul Arefin",
+    img: "/guests/shamsul-arefin.jpeg",
+    designation: "Professor of Department of CSE",
+    organization: "Chittagong University of Engineering & Technology",
+    category: "special",
+  },
+
+  {
+    name: "Mr. Md.Khaled Sohel",
+    img: "/guests/mks.png",
+    designation: "Assistant Professor of SWE",
+    organization: "Daffodil International University",
+    category: "special",
+  },
+  {
+    name: "Mr. Abdus Sattar",
+    img: "/guests/sattarsir.jpg",
+    designation: "AAssistant Professor & Program Coordinator of MSc of CSE",
+    organization: "Daffodil International University",
+    category: "special",
+  },
+  {
+    name: "Ms. Nusrat Jahan",
+    img: "/guests/nusrat.jpeg",
+    designation: "Assistant Professor of SWE",
+    organization: "Daffodil International University",
+    category: "special",
+  },
+
+  {
+    name: "Dr. Md. Fazla Elahe",
+    img: "/guests/fazla.jpg",
+    designation: "Assistant Professor & Associate Head of SWE",
+    organization: "Daffodil International University",
+    category: "special",
+  },
+
+  {
+    name: "Nuruzzaman Faruqui",
+    img: "/guests/faruqui.jpg",
+    designation: "Assistant Professor of SWE",
+    organization: "Daffodil International University",
+    category: "special",
+  },
+
+  {
+    name: "Md Ershadul Hoque Sarker",
+    img: "/guests/ershadul.jpeg",
+    designation: "Technical Lead",
+    organization: "Peakflo (YC W22) ",
+    category: "special",
+  },
+
+
   // {
   //   name: "Sophia Kim",
   //   img: "/assets/sophia-kim.jpg",

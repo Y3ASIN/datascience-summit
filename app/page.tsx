@@ -10,7 +10,7 @@ import ScheduleCard from "@/components/ScheduleCard";
 import SmallDes from "@/components/SmallDes";
 import SummitGallery from "@/components/SummitGallery";
 import TitleBar from "@/components/Titlebar";
-
+import Committee from "@/components/Committe";
 import { events, featureData } from "@/constants";
 
 export default function Home() {
@@ -68,6 +68,11 @@ export default function Home() {
 
         <div className="gap-6 rounded-lg bg-gray-100 p-8 shadow-lg">
           <GuestList />
+        </div>
+
+        <TitleBar title="Current Committee" subText="text-2xl" />
+        <div className="gap-6 rounded-lg p-8">
+          <Committee />
         </div>
 
         <div>

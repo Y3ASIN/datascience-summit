@@ -5,6 +5,7 @@ export interface IPromptCraft extends Document {
     email: string;
     prompt: string;
     imageUrl: string;
+    votes: number;
 }
 
 const PromptCraftSchema: Schema = new Schema({
@@ -12,6 +13,7 @@ const PromptCraftSchema: Schema = new Schema({
     email: { type: String, required: true },
     prompt: { type: String, required: true },
     imageUrl: { type: String, required: true },
+    votes: { type: Number, default: 0 },
 });
 
 export default mongoose.models.PromptCraft ||
