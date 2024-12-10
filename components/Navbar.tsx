@@ -151,6 +151,14 @@ const Navbar = () => {
                 Event Details
               </Link>
             </li>
+            <li>
+              <Link
+                href="/hackathon"
+                className="text-md font-poppins leading-normal text-white hover:text-blue-600"
+              >
+                Competition
+              </Link>
+            </li>
             <li className="mt-3">
               <GradientButton text="Register Now" />
             </li>
