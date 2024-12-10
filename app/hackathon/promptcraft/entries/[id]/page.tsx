@@ -1,8 +1,9 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { useParams } from 'next/navigation';
+import { useParams, useRouter } from 'next/navigation';
 import axios from 'axios';
+import { FaArrowLeft } from 'react-icons/fa';
 import UpdateVote from '@/components/UpdateVote';
 
 interface Prompt {
@@ -15,6 +16,7 @@ interface Prompt {
 
 const PromptDetails = () => {
     const { id } = useParams(); // Get the dynamic route parameter
+    const router = useRouter();
     const [prompt, setPrompt] = useState<Prompt | null>(null);
     const [loading, setLoading] = useState(true);
 
@@ -45,7 +47,16 @@ const PromptDetails = () => {
     }
 
     return (
-        <div className="flex justify-center items-center min-h-screen p-6">
+        <div className="flex flex-col justify-center items-center min-h-screen p-6">
+            {/* Back Button */}
+            <button
+                onClick={() => router.back()}
+                className="flex items-center gap-2 mb-6 px-4 py-2 bg-gray-200 text-gray-700 rounded-lg shadow hover:bg-gray-300 transition"
+            >
+                <FaArrowLeft />
+                <span>Back</span>
+            </button>
+
             <div className="bg-white rounded-xl overflow-hidden max-w-6xl w-full flex flex-col md:flex-row shadow-3xl">
                 {/* Left Side: Image */}
                 <div className="md:w-1/2 flex items-center justify-center p-4 bg-gray-200">
