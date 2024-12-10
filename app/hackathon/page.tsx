@@ -1,38 +1,68 @@
-import Image from 'next/image';
-import React from 'react';
-import promptIMG from '@/public/prompt.jpg';
-import datathonIMG from '@/public/datahackathon.jpg'
+import Image from "next/image";
+import React from "react";
+import promptIMG from "@/public/prompt.jpg";
+import datathonIMG from "@/public/datahackathon.jpg";
 
 const Submit = () => {
   return (
-    <div className="py-8 bg-gray-100">
-      <h1 className="text-3xl font-bold text-center text-gray-800 mb-8">Competition</h1>
-      <p className="text-lg text-gray-700 text-center max-w-3xl mx-auto">
-        Join us for an exciting hackathon where creativity meets technology! Collaborate, innovate, and build solutions to real-world challenges while connecting with like-minded individuals. Are you ready to make an impact?
+    <div className="bg-gray-100 py-8">
+      <h1 className="mb-8 text-center text-3xl font-bold text-gray-800">
+        Competition
+      </h1>
+      <p className="mx-auto max-w-3xl text-pretty px-2 text-center text-lg text-gray-700">
+        Join us for an exciting hackathon where creativity meets technology!
+        Collaborate, innovate, and build solutions to real-world challenges
+        while connecting with like-minded individuals. Are you ready to make an
+        impact?
       </p>
 
-      <div className="flex flex-col md:flex-row gap-6 mt-4 justify-center items-center">
-        <a href="/hackathon/promptcraft" className="max-w-sm rounded overflow-hidden shadow-lg bg-white transform hover:scale-105 transition-transform duration-300">
-          <div className="relative w-full h-48">
-            <Image className="object-cover" src={promptIMG} alt="PromptCraft Image" layout="fill" />
+      <div className="mt-4 flex flex-col items-center justify-center gap-6 md:flex-row">
+        <a
+          href="/hackathon/promptcraft"
+          className="max-w-sm transform overflow-hidden rounded bg-white shadow-lg transition-transform duration-300 hover:scale-105"
+        >
+          <div className="relative h-48 w-full">
+            <Image
+              className="object-cover"
+              src={promptIMG}
+              alt="PromptCraft Image"
+              layout="fill"
+            />
           </div>
           <div className="px-6 py-4">
-            <div className="font-bold text-xl mb-2 text-center">PromptCraft</div>
-            <p className="text-gray-600 text-center">Join the ultimate platform to craft and share creative AI prompts.</p>
+            <div className="mb-2 text-center text-xl font-bold">
+              PromptCraft
+            </div>
+            <p className="text-center text-gray-600">
+              Join the ultimate platform to craft and share creative AI prompts.
+            </p>
           </div>
         </a>
 
-        <a href="/hackathon/data-hackathon" className="max-w-sm rounded overflow-hidden shadow-lg bg-white transform hover:scale-105 transition-transform duration-300">
-          <div className="relative w-full h-48">
-            <Image className="object-cover" src={datathonIMG} alt="Data Hackathon Image" layout="fill" />
+        <a
+          href="/hackathon/data-hackathon"
+          className="max-w-sm transform overflow-hidden rounded bg-white shadow-lg transition-transform duration-300 hover:scale-105"
+        >
+          <div className="relative h-48 w-full">
+            <Image
+              className="object-cover"
+              src={datathonIMG}
+              alt="Data Hackathon Image"
+              layout="fill"
+            />
           </div>
           <div className="px-6 py-4">
-            <div className="font-bold text-xl mb-2 text-center">Data Hackathon</div>
-            <p className="text-gray-600 text-center">Compete in solving real-world data challenges with innovative solutions.</p>
+            <div className="mb-2 text-center text-xl font-bold">
+              Data Hackathon
+            </div>
+            <p className="text-center text-gray-600">
+              Compete in solving real-world data challenges with innovative
+              solutions.
+            </p>
           </div>
         </a>
       </div>
-    </div >
+    </div>
   );
 };
 
