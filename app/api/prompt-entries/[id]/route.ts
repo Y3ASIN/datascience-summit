@@ -2,8 +2,8 @@ import { NextResponse } from 'next/server';
 import { connectToDatabase } from '@/lib/mongodb';
 import PromptCraft from '@/models/PromptCraft';
 
-export const GET = async (req: Request, { params }: { params: { id: string } }) => {
-    const { id } = params;
+export const GET = async (_req: Request, { params }: { params: Promise<{ id: string }> }) => {
+    const { id } = await params;
 
     if (!id) {
         return NextResponse.json(
