@@ -7,11 +7,7 @@ interface RequestBody {
   email: string;
   f1Score?: number; // Optional if `undefined` might be passed
   f1score?: number; // Alternative for f1Score
-}
-
-interface ValidationError extends Error {
-  name: "ValidationError";
-  errors: Record<string, unknown>; // Adjust the type of errors as needed
+  // userData?: string[];
 }
 
 export const POST = async (req: Request) => {
@@ -22,11 +18,16 @@ export const POST = async (req: Request) => {
     const name = body.name;
     const email = body.email;
     const f1Score = body.f1Score ?? body.f1score; // Handle both 'f1Score' and 'f1score'
+    //const userData = body.userData;
 
     // Validate input
+    // !Array.isArray(userData)
     if (!name || !email || typeof f1Score !== "number") {
       return NextResponse.json(
-        { error: "All fields are required and f1Score must be a number" },
+        {
+          error:
+            "Invalid input. name, email, f1Score, and userData are required.",
+        },
         { status: 400 },
       );
     }
@@ -49,9 +50,8 @@ export const POST = async (req: Request) => {
     // Check if error is an instance of Error
     if (error instanceof Error) {
       if (error.name === "ValidationError") {
-        const validationError = error as ValidationError;
         return NextResponse.json(
-          { error: "Validation Error", details: validationError.errors },
+          { error: "Validation Error" },
           { status: 400 },
         );
       }
