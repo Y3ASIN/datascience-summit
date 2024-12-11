@@ -43,7 +43,7 @@ export default function DataHackathon() {
 
   useEffect(() => {
     // Fetch predefined CSV data
-    fetch("/testData.csv")
+    fetch("/targets.csv")
       .then((response) => response.text())
       .then((csvText) => {
         Papa.parse(csvText, {
