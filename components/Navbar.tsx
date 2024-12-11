@@ -87,11 +87,17 @@ const Navbar = () => {
                 >
                   Event Details
                 </Link>
-                <Link
+                {/* <Link
                   href="/hackathon"
                   className={`text-gray-80 rounded-md border-b-2 border-transparent px-3 py-2 text-lg font-medium ${isActive("/submit") ? "border-blue-600" : ""} hover:border-blue-600 hover:text-blue-600`}
                 >
                   Competition
+                </Link> */}
+                <Link
+                  href="/hackathon/leaderboard"
+                  className={`text-gray-80 rounded-md border-b-2 border-transparent px-3 py-2 text-lg font-medium ${isActive("/submit") ? "border-blue-600" : ""} hover:border-blue-600 hover:text-blue-600`}
+                >
+                  Result
                 </Link>
               </div>
             </div>
