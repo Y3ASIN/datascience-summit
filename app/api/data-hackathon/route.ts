@@ -7,7 +7,7 @@ interface RequestBody {
   email: string;
   f1Score?: number; // Optional if `undefined` might be passed
   f1score?: number; // Alternative for f1Score
-  userData?: string[];
+  // userData?: string[];
 }
 
 export const POST = async (req: Request) => {
@@ -18,15 +18,11 @@ export const POST = async (req: Request) => {
     const name = body.name;
     const email = body.email;
     const f1Score = body.f1Score ?? body.f1score; // Handle both 'f1Score' and 'f1score'
-    const userData = body.userData;
+    //const userData = body.userData;
 
     // Validate input
-    if (
-      !name ||
-      !email ||
-      typeof f1Score !== "number" ||
-      !Array.isArray(userData)
-    ) {
+    // !Array.isArray(userData)
+    if (!name || !email || typeof f1Score !== "number") {
       return NextResponse.json(
         {
           error:
@@ -40,7 +36,7 @@ export const POST = async (req: Request) => {
     await connectToDatabase();
 
     // Create a new document
-    const newEntry = new DataHackathon({ name, email, f1Score, userData });
+    const newEntry = new DataHackathon({ name, email, f1Score });
 
     // Save the document to the database
     await newEntry.save();
