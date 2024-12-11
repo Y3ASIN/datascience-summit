@@ -27,10 +27,10 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
       };
     } else {
       timeLeft = {
-        days: Math.ceil(difference / (1000 * 60 * 60 * 24)),
-        hours: Math.ceil((difference / (1000 * 60 * 60)) % 24),
-        minutes: Math.ceil((difference / 1000 / 60) % 60),
-        seconds: Math.ceil((difference / 1000) % 60),
+        days: 0,
+        hours: 0,
+        minutes: 0,
+        seconds: 0,
       };
     }
 
