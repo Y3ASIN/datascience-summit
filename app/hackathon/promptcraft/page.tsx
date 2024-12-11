@@ -78,8 +78,17 @@ export default function PromptCraftPage() {
     <>
       <ToastContainer />
 
-      <div className="flex min-h-screen items-center justify-center bg-gray-50 px-4 py-6 sm:px-6 lg:px-8">
+      <div className="flex min-h-screen flex-col items-center justify-center bg-gray-50 px-4 py-6 sm:px-6 lg:px-8">
+
+        <div className="mb-6 w-full max-w-4xl rounded-lg bg-blue-50 p-4 text-blue-700 shadow-md">
+          <p className="text-lg">
+            <strong>Guideline:</strong> Please read the  guideline carefully.
+            Ensure all fields are completed, and an image is uploaded before
+            submitting.<a href="/Prompt.pdf" className="underline text-yellow-600"> Click here to get the Guideline </a>
+          </p>
+        </div>
         <div className="grid w-full max-w-4xl grid-cols-1 overflow-hidden rounded-lg bg-white shadow-md md:grid-cols-2">
+
           {/* Left Side: Image Upload and Preview */}
           <div className="flex flex-col items-center justify-center bg-gray-100 p-6">
             <div className="mb-4">

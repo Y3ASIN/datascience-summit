@@ -124,73 +124,85 @@ export default function DataHackathon() {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gray-100 p-6">
+    <>
       <ToastContainer />
-      <div className="grid w-full max-w-4xl grid-cols-1 overflow-hidden rounded-lg bg-white shadow-md md:grid-cols-2">
-        <div className="flex flex-col items-center justify-center bg-gray-200 p-6">
-          <div className="mb-4 flex h-48 w-48 items-center justify-center rounded-md bg-gray-300">
-            <span className="text-gray-600">CSV File</span>
-          </div>
-          <label className="mb-2 block text-sm font-semibold">
-            Upload User Data CSV
-          </label>
-          <input
-            type="file"
-            accept=".csv"
-            onChange={handleUserFileUpload}
-            className="block w-full rounded border border-gray-300 px-2 py-1"
-          />
+
+      <div className="flex min-h-screen flex-col items-center justify-center bg-gray-50 px-4 py-6 sm:px-6 lg:px-8">
+
+        <div className="mb-6 w-full max-w-4xl rounded-lg bg-blue-50 p-4 text-blue-700 shadow-md">
+          <p className="text-lg">
+            <strong>Guideline & Dataset:</strong> Please download the guideline carefully.
+            Ensure all fields are completed, and an CSV is uploaded before
+            submitting.<a href="/Hackathon.zip" className="underline text-yellow-600"> Click here to get the Dataset </a>
+          </p>
         </div>
-        <div className="p-6">
-          <h2 className="mb-4 text-center text-xl font-bold text-gray-800">
-            Participant Information
-          </h2>
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div>
-              <label
-                htmlFor="name"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                placeholder="Your name"
-                required
-                className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm"
-              />
+        <div className="grid w-full max-w-4xl grid-cols-1 overflow-hidden rounded-lg bg-white shadow-md md:grid-cols-2">
+
+          <div className="flex flex-col items-center justify-center bg-gray-200 p-6">
+            <div className="mb-4 flex h-48 w-48 items-center justify-center rounded-md bg-gray-300">
+              <span className="text-gray-600">CSV File</span>
             </div>
-            <div>
-              <label
-                htmlFor="email"
-                className="block text-sm font-medium text-gray-700"
+            <label className="mb-2 block text-sm font-semibold">
+              Upload User Data CSV
+            </label>
+            <input
+              type="file"
+              accept=".csv"
+              onChange={handleUserFileUpload}
+              className="block w-full rounded border border-gray-300 px-2 py-1"
+            />
+          </div>
+          <div className="p-6">
+            <h2 className="mb-4 text-center text-xl font-bold text-gray-800">
+              Participant Information
+            </h2>
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div>
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  placeholder="Your name"
+                  required
+                  className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm"
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder="Your email"
+                  required
+                  className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm"
+                />
+              </div>
+              <button
+                type="submit"
+                className="w-full rounded-md bg-blue-600 px-4 py-2 text-white hover:bg-blue-700"
               >
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                placeholder="Your email"
-                required
-                className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm"
-              />
-            </div>
-            <button
-              type="submit"
-              className="w-full rounded-md bg-blue-600 px-4 py-2 text-white hover:bg-blue-700"
-            >
-              Submit
-            </button>
-          </form>
+                Submit
+              </button>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
